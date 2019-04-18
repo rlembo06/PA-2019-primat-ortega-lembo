@@ -1,5 +1,8 @@
 package com.miage;
 
+import com.miage.plugins.PluginsLoader;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -11,12 +14,14 @@ import java.net.URLClassLoader;
  */
 public class App 
 {
-    //private static String urlClass = "file:///home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TPs-OI-Prog_avancee-M1-MIAGE/annexes/build/classes/";
-    private static String urlClass = "file:///home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/plugins/WeaponPlugin-TP-Jeu/dist/WeaponPlugin-TP-Jeu.jar";
-
-    public static void main(String args[]) throws MalformedURLException, ClassNotFoundException {
-        //displayFieldsFromClass(urlClass, "Test");
-        displayFieldsFromClass(urlClass, "com.miage.Weapon");
+    private static String weaponPluginJar = "WeaponPlugin-TP-Jeu.jar";
+    
+    public static void main(String args[]) throws MalformedURLException, ClassNotFoundException, IOException {
+        PluginsLoader pluginLoader = new PluginsLoader();
+        String basePath = pluginLoader.getBasePath();
+        String urlplugin = "file://" + basePath + weaponPluginJar;
+        
+        displayFieldsFromClass(urlplugin, "com.miage.Weapon");
     }
     
     public static void displayFieldsFromClass(String urlPlugin, String className) throws MalformedURLException, ClassNotFoundException {

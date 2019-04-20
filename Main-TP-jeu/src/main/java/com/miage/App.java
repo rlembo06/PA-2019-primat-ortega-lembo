@@ -1,12 +1,14 @@
+/*
+ * RUN project : mvn package && java -cp target/Main-TP-jeu-1.0-SNAPSHOT.jar com.miage.App
+ */
+
 package com.miage;
 
+import com.miage.plugins.Plugins;
 import com.miage.plugins.PluginsLoader;
-import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
+import java.util.List;
 
 /**
  * Hello world!
@@ -15,24 +17,21 @@ import java.net.URLClassLoader;
 public class App 
 {
     private static String weaponPluginJar = "WeaponPlugin-TP-Jeu.jar";
+    private static String mouvementPluginJar = "MouvementPlugin-TP-Jeu-1.0-SNAPSHOT.jar";
     
     public static void main(String args[]) throws MalformedURLException, ClassNotFoundException, IOException {
-        PluginsLoader pluginLoader = new PluginsLoader();
-        String basePath = pluginLoader.getBasePath();
-        String urlplugin = "file://" + basePath + weaponPluginJar;
+        PluginsLoader pluginsLoader = new PluginsLoader();
+        Plugins plugins = new Plugins();
         
-        displayFieldsFromClass(urlplugin, "com.miage.Weapon");
-    }
-    
-    public static void displayFieldsFromClass(String urlPlugin, String className) throws MalformedURLException, ClassNotFoundException {
-        URL classUrl = new URL(urlPlugin);
-        URL[] urls = { classUrl };
-        URLClassLoader ucl = new URLClassLoader(urls);
-        Class cl = ucl.loadClass(className);
+        System.err.println("--- PluginsLoader --- \n");
+        pluginsLoader.displayFieldsFromClass(weaponPluginJar, "com.miage.Weapon");
+        pluginsLoader.displayFieldsFromClass(mouvementPluginJar, "com.miage.Mouvement");
         
-        System.out.println("CLASSE : "+ cl.getName() + "\n");
-        for(Field f: cl.getDeclaredFields()) {
-            System.out.println("- Field name : " + f.getName());
-        }
+        System.err.println("--- Plugins --- \n");
+        plugins.load();
+        
+        Class<?> cl = plugins.getClassByName("com.miage.Mouvement");
+        System.err.println("getClassByName : " + cl.getName());
+        //Récupérer méthode de la class Mouvement ? : cl.getDirection();
     }
 }

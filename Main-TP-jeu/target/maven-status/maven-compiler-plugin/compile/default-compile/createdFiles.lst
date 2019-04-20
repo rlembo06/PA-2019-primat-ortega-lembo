@@ -1,1 +1,3 @@
 com/miage/App.class
+com/miage/plugins/PluginsLoader.class
+com/miage/plugins/Plugins.class

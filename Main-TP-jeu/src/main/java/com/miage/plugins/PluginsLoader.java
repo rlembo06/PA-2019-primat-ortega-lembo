@@ -6,6 +6,8 @@ package com.miage.plugins;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.security.SecureClassLoader;
@@ -36,7 +38,7 @@ public class PluginsLoader extends SecureClassLoader {
         setBasePath();
     }
     
-    public void setBasePath() {
+    private void setBasePath() {
         basePath = new File(".").getAbsolutePath();
         basePath = basePath.substring(0, basePath.length() - 1);
         basePath += "plugins/";
@@ -44,6 +46,14 @@ public class PluginsLoader extends SecureClassLoader {
 
     public String getBasePath() {
         return this.basePath;
+    }
+
+    public ArrayList<File> getPath() {
+        return path;
+    }
+
+    public void setPath(ArrayList<File> path) {
+        this.path = path;
     }
     
     @Override  
@@ -99,6 +109,20 @@ public class PluginsLoader extends SecureClassLoader {
 
         is.close();
         return bytes;
+    }
+    
+    public void displayFieldsFromClass(String pluginName, String className) throws MalformedURLException, ClassNotFoundException {
+        String urlPlugin = "file://" + basePath + pluginName;
+        
+        URL classUrl = new URL(urlPlugin);
+        URL[] urls = { classUrl };
+        URLClassLoader ucl = new URLClassLoader(urls);
+        Class cl = ucl.loadClass(className);
+        
+        System.out.println("CLASSE : "+ cl.getName() + "\r");
+        for(Field f: cl.getDeclaredFields()) {
+            System.out.println("- Field name : " + f.getName());
+        }
     }
     
 }

@@ -7,6 +7,7 @@ package com.miage.plugins;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -17,9 +18,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-/*import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.NotFoundException;*/
+//import com.miage.IWeapon;
 
 /**
  *
@@ -27,9 +26,8 @@ import javassist.NotFoundException;*/
  */
 public class Plugins {
     
-    private PluginsLoader pluginLoader = new PluginsLoader();
+    private String weaponPluginName = "com.miage.IWeapon";
     private List<Class<?>> classes = new ArrayList<Class<?>>();
-    //private final ClassPool classPool = ClassPool.getDefault();
     private String folderPath = "";
     
     public Plugins() {
@@ -43,7 +41,6 @@ public class Plugins {
     }
     
     public void load() throws IOException, MalformedURLException, ClassNotFoundException  {
-        pluginLoader.getPath().add(new File(folderPath));
         browse();
     }
     
@@ -63,38 +60,10 @@ public class Plugins {
               }
         }
     }
-    
-    /* private void setClassPool(String jar)  {
-        try {
-            classPool.insertClassPath(jar);
-        } catch (NotFoundException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    public CtClass getCtClass(String className) {
-        CtClass ctClass = null;
-        try {
-            ctClass = classPool.get(className);
-            System.out.println("setClassPool / " + className +" : " + ctClass);
-        } catch (NotFoundException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return ctClass;
-    } */
 
     public List<Class<?>> getClasses() {
         return classes;
     }
-    
-    /* public Class<?> getClassByName(String className) {
-        for (Class<?> cl : classes) {
-            if(cl.getName() == className) {
-                return cl;
-            }
-        }
-        return null;
-    } */
     
     public Class<?> getClassByName(String className) {
         for (Class<?> cl : classes) {
@@ -105,6 +74,28 @@ public class Plugins {
         return null;
     }
     
+    public Object getMethodClassPlugin(Class<?> cl, String method) {
+        Object result = null;
+        try {
+            try {
+                result = cl.getMethod(method).invoke(cl.newInstance());
+            } catch (IllegalArgumentException ex) {
+                Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InvocationTargetException ex) {
+                Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (NoSuchMethodException ex) {
+            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SecurityException ex) {
+            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+   
     private void classesInJAR(String jar) throws MalformedURLException, IOException, ClassNotFoundException {
         
         JarFile jarFile = new JarFile(jar);

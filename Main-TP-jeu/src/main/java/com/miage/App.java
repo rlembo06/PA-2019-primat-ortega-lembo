@@ -7,6 +7,7 @@ package com.miage;
 import com.miage.plugins.Plugins;
 import com.miage.plugins.PluginsLoader;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class App
     private static String weaponPluginJar = "WeaponPlugin-TP-Jeu-1.0-SNAPSHOT.jar";
     private static String mouvementPluginJar = "MouvementPlugin-TP-Jeu-1.0-SNAPSHOT.jar";
     
-    public static void main(String args[]) throws MalformedURLException, ClassNotFoundException, IOException {
+    public static void main(String args[]) throws MalformedURLException, ClassNotFoundException, IOException, NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         PluginsLoader pluginsLoader = new PluginsLoader();
         Plugins plugins = new Plugins();
         
@@ -30,8 +31,8 @@ public class App
         System.err.println("\n\n--- Plugins --- \n");
         plugins.load();
         
-        Class<?> cl = plugins.getClassByName("com.miage.Mouvement");
-        System.err.println("getClassByName : " + cl.getName());
-        //Récupérer méthode de la class Mouvement ? : cl.getDirection();
+        Class<?> cl = plugins.getClassByName("com.miage.Weapon");
+        System.err.println("Weapon : " + cl.getName());
+        System.err.println("Weapon - getLabel [getMethodClassPlugin] : " + plugins.getMethodClassPlugin(cl, "getLabel"));
     }
 }

@@ -64,7 +64,7 @@ public class Plugin {
         return classes;
     }
     
-    public Class<?> getClassByName(String className) {
+    protected Class<?> getClassByName(String className) {
         for (Class<?> cl : classes) {
             if(cl.getName() == className) {
                 return cl;
@@ -73,7 +73,7 @@ public class Plugin {
         return null;
     }
     
-    public Object getMethodClassPlugin(Class<?> cl, String method) {
+    protected Object getMethodClassPlugin(Class<?> cl, String method) {
         Object result = null;
         try {
             try {

@@ -33,4 +33,8 @@ public class WeaponPlugin extends Plugin {
     public Object getWeaponMethod(String method) {
         return getMethodClassPlugin(weapon, method);
     } 
+
+    public List<Annotation> getAnnotations() {
+        return annotations;
+    }    
 }

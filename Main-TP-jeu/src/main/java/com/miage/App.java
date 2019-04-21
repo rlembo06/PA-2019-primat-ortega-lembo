@@ -30,16 +30,10 @@ public class App
         pluginsLoader.displayFieldsFromClass(weaponPluginJar, "com.miage.Weapon");
         pluginsLoader.displayFieldsFromClass(mouvementPluginJar, "com.miage.Mouvement");
         
-        System.err.println("\n\n--- Plugins --- \n");
-        plugins.load();
-        
-        Class<?> cl = plugins.getClassByName("com.miage.Weapon");
-        System.err.println("Weapon : " + cl.getName());
-        System.err.println("Weapon - getLabel [getMethodClassPlugin] : " + plugins.getMethodClassPlugin(cl, "getLabel"));
-        
         System.err.println("\n\n--- WeaponPlugin --- \n");
         WeaponPlugin weapon = new WeaponPlugin();
         System.err.println("Weapon - getId : " +  weapon.getWeaponMethod("getId"));
+        System.err.println("Weapon - getAnnotations : " +  weapon.getAnnotations());
         
         System.err.println("\n\n--- MouvementPlugin --- \n");
         MouvementPlugin mouvement = new MouvementPlugin();

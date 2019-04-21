@@ -5,27 +5,26 @@
  */
 package com.miage;
 
+import java.lang.annotation.Annotation;
+
 /**
  *
  * @author romain
  */
-public class Mouvement {
-
-    public Mouvement(String direction) {
-        this.direction = direction;
-    }
-
-    public Mouvement() {
-    }
-        
-    private String direction = "left";
+public class Mouvement implements IMouvement {
 
     public String getDirection() {
-        return direction;
+        return "LEFT";
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    @Override
+    public String getId() {
+        return "ID-TEST";
     }
-    
+
+    @Override
+    public Class<? extends Annotation> annotationType() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

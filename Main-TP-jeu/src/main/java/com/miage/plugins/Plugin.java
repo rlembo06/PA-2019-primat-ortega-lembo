@@ -7,34 +7,34 @@ package com.miage.plugins;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-//import com.miage.IWeapon;
 
 /**
  *
  * @author romain
  */
-public class Plugins {
+public class Plugin {
     
-    private String weaponPluginName = "com.miage.IWeapon";
     private List<Class<?>> classes = new ArrayList<Class<?>>();
     private String folderPath = "";
     
-    public Plugins() {
+    public Plugin() {
         setFolderPath();
     }
     
-    private void setFolderPath() {
+    protected void setFolderPath() {
         folderPath = new File(".").getAbsolutePath();
         folderPath = folderPath.substring(0, folderPath.length() - 1);
         folderPath += "plugins/";
@@ -53,7 +53,6 @@ public class Plugins {
                 
                 if(file.getName().endsWith(".jar")) {
                     classesInJAR(folderPath + file.getName());
-                    //setClassPool(folderPath + file.getName());
                 }
               } else if (file.isDirectory()) {
                 System.out.println("- Directory : " + file.getName());
@@ -61,7 +60,7 @@ public class Plugins {
         }
     }
 
-    public List<Class<?>> getClasses() {
+    protected List<Class<?>> getClasses() {
         return classes;
     }
     
@@ -80,22 +79,26 @@ public class Plugins {
             try {
                 result = cl.getMethod(method).invoke(cl.newInstance());
             } catch (IllegalArgumentException ex) {
-                Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
             } catch (InvocationTargetException ex) {
-                Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
             }
         } catch (NoSuchMethodException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SecurityException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Logger.getLogger(Plugins.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Plugin.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
     }
-   
+    
+    protected List<Annotation> getAnnotationsClassPlugin(Class<?> cl) {
+        return Arrays.asList(cl.getAnnotations());
+    }   
+    
     private void classesInJAR(String jar) throws MalformedURLException, IOException, ClassNotFoundException {
         
         JarFile jarFile = new JarFile(jar);

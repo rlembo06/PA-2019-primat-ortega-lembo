@@ -1,3 +1,6 @@
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/App.java
-/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/plugins/Plugins.java
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/plugins/PluginsLoader.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/plugins/Plugin.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/JavaFXMain.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/plugins/MouvementPlugin.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-OI-Prog_avancee-Jeu-M1-MIAGE/Main-TP-jeu/src/main/java/com/miage/plugins/WeaponPlugin.java

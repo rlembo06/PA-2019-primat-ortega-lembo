@@ -87,6 +87,15 @@ public class Plugins {
         return classes;
     }
     
+    /* public Class<?> getClassByName(String className) {
+        for (Class<?> cl : classes) {
+            if(cl.getName() == className) {
+                return cl;
+            }
+        }
+        return null;
+    } */
+    
     public Class<?> getClassByName(String className) {
         for (Class<?> cl : classes) {
             if(cl.getName() == className) {

@@ -57,7 +57,8 @@ public class PluginsLoader extends SecureClassLoader {
     }
     
     @Override  
-    protected Class<?> findClass(String name) throws ClassNotFoundException {  
+    //protected Class<?> findClass(String name) throws ClassNotFoundException {  
+    public Class<?> findClass(String name) throws ClassNotFoundException {  
         byte[] b = loadClassData(name);  
         return super.defineClass(name, b, 0, b.length);  
     }

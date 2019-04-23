@@ -2,13 +2,14 @@ import plugins.Movement;
 import plugins.Weapon;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.List;
 
 public class App {
 
-    public static void main(String args[])  throws IOException, MalformedURLException, ClassNotFoundException {
+    public static void main(String args[]) throws IOException, MalformedURLException, ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException {
 
         /* PluginLoader pluginLoader = new PluginLoader();
         pluginLoader.loadPlugin();
@@ -30,15 +31,20 @@ public class App {
             System.out.println("- Weapon class : " + cl.getName());
         }
 
-        Class<?> bazooka = weapon.getClassByName("weapons.Bazooka");
+        /* Class<?> bazooka = weapon.getClassByName("weapons.Bazooka");
         List<Method> methodsPowerful = weapon.getMethodsByAnnotation(bazooka, annotations.Powerful.class);
         for (Method method : methodsPowerful) {
             System.out.println("- method Powerful : " + method.getName());
-        }
+        } */
+
+        Class<?> bazooka = weapon.getClassByName("weapons.Bazooka");
+        Object methodsPowerful = weapon.getMethodsByAnnotation(bazooka, annotations.Powerful.class, 5);
+        System.out.println("Method Powerful : " + methodsPowerful);
 
         List<Class<?>> classesWeaponAnnoted = weapon.getClassesByAnnotation(weaponClasses, annotations.Weapon.class);
         for (Class<?> cl : classesWeaponAnnoted) {
             System.out.println("- method Weapon Annoted : " + cl.getName());
         }
+
     }
 }

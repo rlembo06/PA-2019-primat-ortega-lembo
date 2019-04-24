@@ -3,12 +3,12 @@ package plugins;
 import java.io.IOException;
 import java.util.List;
 
-public class Movement extends PluginLoader {
+public class WeaponPlugin extends PluginLoader {
 
     private List<Class<?>> classes;
 
-    public Movement() throws IOException, ClassNotFoundException {
-        classes = loadPlugin("movements");
+    public WeaponPlugin() throws IOException, ClassNotFoundException {
+        classes = loadPlugin("weapons");
     }
 
     @Override

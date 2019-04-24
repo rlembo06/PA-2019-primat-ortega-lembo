@@ -10,6 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="controllers.menu.MenuController"
@@ -66,8 +67,12 @@
            GridPane.rowIndex="4" >
     </Label>
     <ComboBox
+            fx:id="weaponsComboBox"
             GridPane.columnIndex="1"
             GridPane.rowIndex="5">
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
     </ComboBox>
 
     <!-- Movement column -->
@@ -76,8 +81,12 @@
            GridPane.rowIndex="4" >
     </Label>
     <ComboBox
+            fx:id="movementsComboBox"
             GridPane.columnIndex="2"
             GridPane.rowIndex="5">
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
     </ComboBox>
 
 </GridPane>

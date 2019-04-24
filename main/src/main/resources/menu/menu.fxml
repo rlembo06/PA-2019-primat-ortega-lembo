@@ -14,7 +14,6 @@
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="controllers.menu.MenuController"
           prefHeight="400.0" prefWidth="600.0">
-
     <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
     <columnConstraints>
         <ColumnConstraints minWidth="200" prefWidth="100"
@@ -41,30 +40,44 @@
         </GridPane.margin>
     </Label>
 
+    <!-- Test button -->
+    <Button onAction="#sayHello"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="2">
+        Say Something
+    </Button>
+    <Label fx:id="labelHello"
+           GridPane.columnIndex="1"
+           GridPane.rowIndex="2"
+           text="INIT"/>
+
+    <!-- Player column -->
     <Label text="Joueur(s) : "
            GridPane.columnIndex="0"
-           GridPane.rowIndex="2" >
+           GridPane.rowIndex="4" >
     </Label>
     <Text   text="Joueur 1"
             GridPane.columnIndex="0"
-            GridPane.rowIndex="3" />
+            GridPane.rowIndex="5" />
 
+    <!-- Weapon column -->
     <Label text="Arme"
            GridPane.columnIndex="1"
-           GridPane.rowIndex="2" >
+           GridPane.rowIndex="4" >
     </Label>
     <ComboBox
             GridPane.columnIndex="1"
-            GridPane.rowIndex="3">
+            GridPane.rowIndex="5">
     </ComboBox>
 
+    <!-- Movement column -->
     <Label text="Mouvement"
            GridPane.columnIndex="2"
-           GridPane.rowIndex="2" >
+           GridPane.rowIndex="4" >
     </Label>
     <ComboBox
             GridPane.columnIndex="2"
-            GridPane.rowIndex="3">
+            GridPane.rowIndex="5">
     </ComboBox>
 
 </GridPane>

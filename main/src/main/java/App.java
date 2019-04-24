@@ -1,50 +1,45 @@
-import plugins.Movement;
-import plugins.Weapon;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.util.List;
+public class App extends Application {
 
-public class App {
+    public static void main(String args[]){
+        launch();
+    }
 
-    public static void main(String args[]) throws IOException, MalformedURLException, ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    /*@Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setTitle("Hello World!");
+        Button btn = new Button();
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
 
-        /* PluginLoader pluginLoader = new PluginLoader();
-        pluginLoader.loadPlugin();
-        List<Class<?>> classes = pluginLoader.getClasses();
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+        });
 
-        System.out.println(" All classes : " + classes); */
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
+    }*/
 
-        Movement movement = new Movement();
-        List<Class<?>> movementClasses = movement.getClasses();
-        System.out.println("Movement : " + movementClasses);
-        for (Class<?> cl : movementClasses) {
-            System.out.println("- Movement class : " + cl.getName());
-        }
+    @Override
+    public void start(Stage primaryStage) throws Exception {
 
-        Weapon weapon = new Weapon();
-        List<Class<?>> weaponClasses = weapon.getClasses();
-        System.out.println("Weapon : " + weaponClasses);
-        for (Class<?> cl : weaponClasses) {
-            System.out.println("- Weapon class : " + cl.getName());
-        }
+        FXMLLoader menuSceneLoader = new FXMLLoader(getClass().getResource("/menu/menu.fxml"));
+        //FXMLLoader menuSceneLoader = new FXMLLoader(menu);
+        Parent root = menuSceneLoader.load();
 
-        /* Class<?> bazooka = weapon.getClassByName("weapons.Bazooka");
-        List<Method> methodsPowerful = weapon.getMethodsByAnnotation(bazooka, annotations.Powerful.class);
-        for (Method method : methodsPowerful) {
-            System.out.println("- method Powerful : " + method.getName());
-        } */
-
-        Class<?> bazooka = weapon.getClassByName("weapons.Bazooka");
-        Object methodsPowerful = weapon.getMethodsByAnnotation(bazooka, annotations.Powerful.class, 5);
-        System.out.println("Method Powerful : " + methodsPowerful);
-
-        List<Class<?>> classesWeaponAnnoted = weapon.getClassesByAnnotation(weaponClasses, annotations.Weapon.class);
-        for (Class<?> cl : classesWeaponAnnoted) {
-            System.out.println("- method Weapon Annoted : " + cl.getName());
-        }
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
+
 }

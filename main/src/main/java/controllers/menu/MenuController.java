@@ -43,9 +43,9 @@ public class MenuController implements Initializable {
             weaponsComboBox.getItems().addAll(weapons.getList());
             movementsComboBox.getItems().addAll(movements.getList());
 
-            usersGridPane.add(new Label("Joueur " + countUsers), 0, 1+ countUsers);
-            usersGridPane.add(weaponsComboBox, 1, 1+ countUsers);
-            usersGridPane.add(movementsComboBox, 2, 1+ countUsers);
+            usersGridPane.add(new Label("Joueur " + countUsers), 0, countUsers);
+            usersGridPane.add(weaponsComboBox, 1, countUsers);
+            usersGridPane.add(movementsComboBox, 2, countUsers);
         }
     }
 
@@ -55,6 +55,8 @@ public class MenuController implements Initializable {
         if(countUsers >= MIN_USERS) {
             users.getList().remove(countUsers - 1);
             System.out.println("count users: " + countUsers);
+
+            usersGridPane.getRowConstraints().remove(countUsers);
         }
     }
 

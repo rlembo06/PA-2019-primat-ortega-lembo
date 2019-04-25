@@ -53,6 +53,6 @@
 
     <Button mnemonicParsing="false" onAction="#addUser" prefWidth="200.0" text="Ajouter joueur" GridPane.columnIndex="0" GridPane.rowIndex="2" />
     <Button mnemonicParsing="false" prefWidth="200.0" text="Jouer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-    <Button mnemonicParsing="false" onAction="#removeUser" prefWidth="200.0" text="Enlever joueur" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <!--<Button mnemonicParsing="false" onAction="#removeUser" prefWidth="200.0" text="Enlever joueur" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
 
 </GridPane>

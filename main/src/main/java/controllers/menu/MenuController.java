@@ -49,15 +49,15 @@ public class MenuController implements Initializable {
         }
     }
 
-    @FXML
+    /*@FXML TODO
     public void removeUser(ActionEvent actionEvent) {
         int countUsers = users.getList().size();
         if(countUsers >= MIN_USERS) {
             users.getList().remove(countUsers - 1);
             System.out.println("count users: " + countUsers);
 
-            usersGridPane.getRowConstraints().remove(countUsers);
+            usersGridPane.getChildren().set(countUsers, null);
         }
-    }
+    }*/
 
 }

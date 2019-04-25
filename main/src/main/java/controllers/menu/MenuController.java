@@ -1,9 +1,6 @@
 package controllers.menu;
 
-import entities.Movement;
-import entities.Movements;
-import entities.Weapon;
-import entities.Weapons;
+import entities.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,8 +13,12 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
 
+    private int MIN_USERS = 1;
+    private int MAX_USERS = 3;
+
     private Weapons weapons;
     private Movements movements;
+    private Users users = new Users();
 
     @FXML
     private Label labelHello;
@@ -44,9 +45,21 @@ public class MenuController implements Initializable {
     }
 
     @FXML
-    public void sayHello(ActionEvent actionEvent) {
-        labelHello.setText("Hello mother fucker !!!");
+    public void addUser(ActionEvent actionEvent) {
+        int countUsers = users.getList().size();
+        if(countUsers < MAX_USERS) {
+            users.getList().add(new User(countUsers++));
+            System.out.println("count users: " + countUsers);
+        }
     }
 
+    @FXML
+    public void removeUser(ActionEvent actionEvent) {
+        int countUsers = users.getList().size();
+        if(countUsers >= MIN_USERS) {
+            users.getList().remove(countUsers - 1);
+            System.out.println("count users: " + countUsers);
+        }
+    }
 
 }

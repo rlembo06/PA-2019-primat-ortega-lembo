@@ -1,92 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.text.Font?>
-
-<?import javafx.scene.text.Text?>
 <?import javafx.collections.FXCollections?>
-<GridPane xmlns="http://javafx.com/javafx"
-          xmlns:fx="http://javafx.com/fxml"
-          fx:controller="controllers.menu.MenuController"
-          prefHeight="400.0" prefWidth="600.0">
-    <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane hgap="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.menu.MenuController">
+    <padding><Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /></padding>
     <columnConstraints>
-        <ColumnConstraints minWidth="200" prefWidth="100"
-                           maxWidth="Infinity">
+        <ColumnConstraints maxWidth="Infinity" minWidth="200.0" prefWidth="100.0">
         </ColumnConstraints>
-        <ColumnConstraints minWidth="200" prefWidth="200"
-                           maxWidth="Infinity">
+        <ColumnConstraints maxWidth="Infinity" minWidth="200.0" prefWidth="200.0">
         </ColumnConstraints>
-        <ColumnConstraints minWidth="200" prefWidth="200"
-                           maxWidth="Infinity">
-        </ColumnConstraints>
+      <ColumnConstraints maxWidth="Infinity" minWidth="200.0" prefWidth="200.0" />
     </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="-Infinity" percentHeight="15.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="46.0" minHeight="-Infinity" percentHeight="15.0" prefHeight="46.0" />
+        <RowConstraints maxHeight="83.0" minHeight="-Infinity" percentHeight="15.0" prefHeight="53.0" />
+        <RowConstraints maxHeight="83.0" minHeight="10.0" percentHeight="15.0" prefHeight="53.0" />
+        <RowConstraints maxHeight="83.0" minHeight="10.0" percentHeight="15.0" prefHeight="53.0" />
+        <RowConstraints maxHeight="83.0" minHeight="10.0" percentHeight="15.0" prefHeight="53.0" />
+    </rowConstraints>
 
-    <!-- Add Header Label -->
-    <Label text="Jeu de combat"
-           GridPane.columnIndex="0"
-           GridPane.rowIndex="0" GridPane.columnSpan="2"
-           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
-        <font>
-            <Font name="Arial" size="24" ></Font>
-        </font>
-        <GridPane.margin>
-            <Insets top="20" right="0" bottom="20" left="0"></Insets>
-        </GridPane.margin>
-    </Label>
-
-    <!-- Test button -->
-    <Button onAction="#sayHello"
-            GridPane.columnIndex="0"
-            GridPane.rowIndex="2">
-        Say Something
-    </Button>
-    <Label fx:id="labelHello"
-           GridPane.columnIndex="1"
-           GridPane.rowIndex="2"
-           text="INIT"/>
+    <Label fx:id="labelHello" alignment="CENTER" prefHeight="24.0" prefWidth="667.0" text="Jeu de combat" GridPane.columnSpan="3">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font></Label>
 
     <!-- Player column -->
-    <Label text="Joueur(s) : "
-           GridPane.columnIndex="0"
-           GridPane.rowIndex="4" >
+    <Label text="Joueur(s) : " GridPane.rowIndex="3">
     </Label>
-    <Text   text="Joueur 1"
-            GridPane.columnIndex="0"
-            GridPane.rowIndex="5" />
+    <Text text="Joueur 1" GridPane.rowIndex="4" />
 
     <!-- Weapon column -->
-    <Label text="Arme"
-           GridPane.columnIndex="1"
-           GridPane.rowIndex="4" >
+    <Label alignment="CENTER" prefWidth="200.0" text="Arme" GridPane.columnIndex="1" GridPane.rowIndex="3">
     </Label>
-    <ComboBox
-            fx:id="weaponsComboBox"
-            GridPane.columnIndex="1"
-            GridPane.rowIndex="5">
+    <ComboBox fx:id="weaponsComboBox" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
         <items>
             <FXCollections fx:factory="observableArrayList" />
         </items>
     </ComboBox>
 
     <!-- Movement column -->
-    <Label text="Mouvement"
-           GridPane.columnIndex="2"
-           GridPane.rowIndex="4" >
+    <Label alignment="CENTER" prefWidth="200.0" text="Mouvement" GridPane.columnIndex="2" GridPane.rowIndex="3">
     </Label>
-    <ComboBox
-            fx:id="movementsComboBox"
-            GridPane.columnIndex="2"
-            GridPane.rowIndex="5">
+    <ComboBox fx:id="movementsComboBox" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
         <items>
             <FXCollections fx:factory="observableArrayList" />
         </items>
     </ComboBox>
+   <Button onAction="#addUser" mnemonicParsing="false" prefWidth="200.0" text="Ajouter joueur" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   <Button mnemonicParsing="false" prefWidth="200.0" text="Jouer" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+   <Button onAction="#removeUser" mnemonicParsing="false" prefWidth="200.0" text="Enlever joueur" GridPane.rowIndex="7" />
 
 </GridPane>

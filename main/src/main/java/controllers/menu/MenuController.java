@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,33 +17,18 @@ public class MenuController implements Initializable {
     private int MIN_USERS = 1;
     private int MAX_USERS = 3;
 
-    private Weapons weapons;
-    private Movements movements;
+    private Weapons weapons = new Weapons();
+    private Movements movements = new Movements();
     private Users users = new Users();
 
     @FXML
-    private Label labelHello;
+    private GridPane usersGridPane;
 
-    @FXML
-    private ComboBox<Weapon> weaponsComboBox;
-
-    @FXML
-    private ComboBox<Movement> movementsComboBox;
+    public MenuController() throws IOException, ClassNotFoundException {
+    }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        try {
-            weapons = new Weapons();
-            movements = new Movements();
-            weaponsComboBox.getItems().addAll(weapons.getList());
-            movementsComboBox.getItems().addAll(movements.getList());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
+    public void initialize(URL location, ResourceBundle resources) {}
 
     @FXML
     public void addUser(ActionEvent actionEvent) {
@@ -50,6 +36,16 @@ public class MenuController implements Initializable {
         if(countUsers < MAX_USERS) {
             users.getList().add(new User(countUsers++));
             System.out.println("count users: " + countUsers);
+
+            ComboBox<Weapon> weaponsComboBox = new ComboBox<>();
+            ComboBox<Movement> movementsComboBox = new ComboBox<>();
+
+            weaponsComboBox.getItems().addAll(weapons.getList());
+            movementsComboBox.getItems().addAll(movements.getList());
+
+            usersGridPane.add(new Label("Joueur " + countUsers), 0, 1+ countUsers);
+            usersGridPane.add(weaponsComboBox, 1, 1+ countUsers);
+            usersGridPane.add(movementsComboBox, 2, 1+ countUsers);
         }
     }
 

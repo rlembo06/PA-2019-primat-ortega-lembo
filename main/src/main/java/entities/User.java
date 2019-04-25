@@ -3,6 +3,8 @@ package entities;
 public class User {
     private int id;
     private String name = "Joueur";
+    private Weapon weapon;
+    private Movement movement;
 
     public User(int id) {
         this.id = id;
@@ -22,6 +24,22 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    public Movement getMovement() {
+        return movement;
+    }
+
+    public void setMovement(Movement movement) {
+        this.movement = movement;
     }
 
     @Override

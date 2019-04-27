@@ -1,7 +1,6 @@
 package controllers.menu;
 
 import entities.*;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,14 +23,18 @@ public class MenuController implements Initializable {
     //private int MIN_USERS = 1;
     private int MAX_USERS = 3;
 
-    private Weapons weapons = new Weapons();
-    private Movements movements = new Movements();
-    private Users users = new Users();
-
     @FXML
     private GridPane usersGridPane;
 
     public MenuController() throws IOException, ClassNotFoundException {}
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Movements.loadList();
+        Movements.loadListName();
+        Weapons.loadList();
+        Weapons.loadListName();
+    }
 
     private void launchArena() throws IOException {
         FXMLLoader arenaSceneLoader = new FXMLLoader(getClass().getResource("/arena/arena.fxml"));
@@ -49,7 +52,7 @@ public class MenuController implements Initializable {
 
     @FXML
     public void startGame(ActionEvent actionEvent) throws IOException {
-        int countUsers = users.getList().size();
+        int countUsers = Users.getList().size();
 
         if(countUsers >= 1) {
             setUserItems();
@@ -59,7 +62,7 @@ public class MenuController implements Initializable {
 
             // CHANGES :
             System.out.println("ALL USERS :");
-            for (User user : users.getList()) {
+            for (User user : Users.getList()) {
                 System.out.println(
                         "- user: "+ user.getName()
                                 + " [Movement] " + user.getMovement()
@@ -73,18 +76,18 @@ public class MenuController implements Initializable {
 
     @FXML
     public void addUser(ActionEvent actionEvent) {
-        int countUsers = users.getList().size();
+        int countUsers = Users.getList().size();
         if(countUsers < MAX_USERS) {
             User newUser = new User(countUsers++);
-            users.getList().add(newUser);
+            Users.getList().add(newUser);
 
             ComboBox<Weapon> weaponsComboBox = new ComboBox<>();
             weaponsComboBox.setId("weapons-" + newUser.getId());
             ComboBox<Movement> movementsComboBox = new ComboBox<>();
             movementsComboBox.setId("movements-" + newUser.getId());
 
-            weaponsComboBox.getItems().addAll(weapons.getList());
-            movementsComboBox.getItems().addAll(movements.getList());
+            weaponsComboBox.getItems().addAll(Weapons.getList());
+            movementsComboBox.getItems().addAll(Movements.getList());
 
             usersGridPane.add(new Label(newUser.toString()), 0, countUsers);
             usersGridPane.add(weaponsComboBox, 1, countUsers);
@@ -93,15 +96,15 @@ public class MenuController implements Initializable {
     }
 
     private void setUserItems() {
-        for (User user : users.getList()) {;
+        for (User user : Users.getList()) {;
             for (Node child : usersGridPane.getChildren()) {
-                getMovementSelected(child, user);
-                getWeaponSelected(child, user);
+                setMovementSelected(child, user);
+                setWeaponSelected(child, user);
             }
         }
     }
 
-    private void getMovementSelected(Node child, User user) {
+    private void setMovementSelected(Node child, User user) {
         if(child.getId() != null) {
             if(child.getId().equals("movements-" + user.getId())) {
                 ComboBox<Movement> movementsComboBox = (ComboBox) child;
@@ -110,7 +113,7 @@ public class MenuController implements Initializable {
         }
     }
 
-    private void getWeaponSelected(Node child, User user) {
+    private void setWeaponSelected(Node child, User user) {
         if(child.getId() != null) {
             if(child.getId().equals("weapons-" + user.getId())) {
                 ComboBox<Weapon> weaponsComboBox = (ComboBox) child;
@@ -118,9 +121,6 @@ public class MenuController implements Initializable {
             }
         }
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {}
 
     /*@FXML TODO
     public void removeUser(ActionEvent actionEvent) {

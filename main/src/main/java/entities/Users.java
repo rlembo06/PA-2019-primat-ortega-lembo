@@ -3,25 +3,25 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Users {
-    private List<User> list = new ArrayList<>();
-    private List<String> listName = new ArrayList<>();
+public final class Users {
+    private static List<User> list = new ArrayList<>();
+    private static List<String> listName = new ArrayList<>();
 
-    public Users() {}
+    private Users() {}
 
-    public List<User> getList() {
+    public static List<User> getList() {
         return list;
     }
 
-    public void setList(List<User> list) {
-        this.list = list;
+    public static void setList(List<User> list) {
+        Users.list = list;
     }
 
-    public List<String> getListName() {
+    public static List<String> getListName() {
         return listName;
     }
 
-    public void setListName(List<String> listName) {
-        this.listName = listName;
+    public static void setListName(List<String> listName) {
+        Users.listName = listName;
     }
 }

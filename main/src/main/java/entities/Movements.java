@@ -6,28 +6,43 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movements {
-    private MovementPlugin plugin;
-    private List<Movement> list = new ArrayList<>();
-    private List<String> listName = new ArrayList<>();
+public final class Movements {
+    private static MovementPlugin plugin;
 
-    public Movements() throws IOException, ClassNotFoundException {
-        plugin = new MovementPlugin();
-        getList();
-        getListName();
+    static {
+        try {
+            plugin = new MovementPlugin();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public List<String> getListName() {
+    private static List<Movement> list = new ArrayList<>();
+    private static List<String> listName = new ArrayList<>();
+
+    private Movements() throws IOException, ClassNotFoundException {
+        plugin = new MovementPlugin();
+    }
+
+    public static void loadListName() {
         for (Class<?> item : plugin.getClasses()) {
             listName.add(item.getName());
         }
+    }
+
+    public static List<String> getListName() {
         return listName;
     }
 
-    public List<Movement> getList() {
+    public static void loadList() {
         for (Class<?> item : plugin.getClasses()) {
             list.add(new Movement(item.getName()));
         }
+    }
+
+    public static List<Movement> getList() {
         return list;
     }
 

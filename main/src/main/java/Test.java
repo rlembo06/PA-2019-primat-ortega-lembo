@@ -34,7 +34,6 @@ public class Test {
             System.out.println("- method Weapon Annoted : " + cl.getName());
         }*/
 
-        Weapons weapons = new Weapons();
-        System.out.println("WEAPONS: " + weapons.getList());
+        System.out.println("WEAPONS: " + Weapons.getList());
     }
 }

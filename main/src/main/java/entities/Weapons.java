@@ -6,28 +6,39 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Weapons {
-    private WeaponPlugin plugin;
-    private List<Weapon> list = new ArrayList<>();
-    private List<String> listName = new ArrayList<>();
+public final class Weapons {
+    private static WeaponPlugin plugin;
 
-    public Weapons() throws IOException, ClassNotFoundException {
-        plugin = new WeaponPlugin();
-        getList();
-        getListName();
+    static {
+        try {
+            plugin = new WeaponPlugin();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public List<String> getListName() {
+    private static List<Weapon> list = new ArrayList<>();
+    private static List<String> listName = new ArrayList<>();
+
+    public static void loadListName() {
         for (Class<?> item : plugin.getClasses()) {
             listName.add(item.getName());
         }
-        return listName;
     }
 
-    public List<Weapon> getList() {
+    public static void loadList() {
         for (Class<?> item : plugin.getClasses()) {
             list.add(new Weapon(item.getName()));
         }
+    }
+
+    public static List<String> getListName() {
+        return listName;
+    }
+
+    public static List<Weapon> getList() {
         return list;
     }
 

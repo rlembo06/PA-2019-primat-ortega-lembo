@@ -1,13 +1,19 @@
 package controllers.menu;
 
 import entities.*;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,11 +31,45 @@ public class MenuController implements Initializable {
     @FXML
     private GridPane usersGridPane;
 
-    public MenuController() throws IOException, ClassNotFoundException {
+    public MenuController() throws IOException, ClassNotFoundException {}
+
+    private void launchArena() throws IOException {
+        FXMLLoader arenaSceneLoader = new FXMLLoader(getClass().getResource("/arena/arena.fxml"));
+        Parent root = arenaSceneLoader.load();
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {}
+    private void closeWindow(ActionEvent actionEvent) {
+        ((Stage)(((Button)actionEvent.getSource()).getScene().getWindow())).close();
+    }
+
+    @FXML
+    public void startGame(ActionEvent actionEvent) throws IOException {
+        int countUsers = users.getList().size();
+
+        if(countUsers >= 1) {
+            setUserItems();
+            launchArena();
+            closeWindow(actionEvent);
+
+
+            // CHANGES :
+            System.out.println("ALL USERS :");
+            for (User user : users.getList()) {
+                System.out.println(
+                        "- user: "+ user.getName()
+                                + " [Movement] " + user.getMovement()
+                                + " [Weapon] " + user.getWeapon()
+                );
+            }
+        } else {
+            System.out.println("Not enough players");
+        }
+    }
 
     @FXML
     public void addUser(ActionEvent actionEvent) {
@@ -52,33 +92,12 @@ public class MenuController implements Initializable {
         }
     }
 
-    @FXML
-    public void startGame(ActionEvent actionEvent){
-        setUserItems();
-
-        // CHANGES :
-        System.out.println("ALL USERS :");
-        for (User user : users.getList()) {
-            System.out.println(
-                "- user: "+ user.getName()
-                + " [Movement] " + user.getMovement()
-                + " [Weapon] " + user.getWeapon()
-            );
-        }
-    }
-
     private void setUserItems() {
-        int countUsers = users.getList().size();
-
-        if(countUsers >= 1) {
-            for (User user : users.getList()) {;
-                for (Node child : usersGridPane.getChildren()) {
-                    getMovementSelected(child, user);
-                    getWeaponSelected(child, user);
-                }
+        for (User user : users.getList()) {;
+            for (Node child : usersGridPane.getChildren()) {
+                getMovementSelected(child, user);
+                getWeaponSelected(child, user);
             }
-        } else {
-            System.out.println("Not enough players");
         }
     }
 
@@ -99,6 +118,9 @@ public class MenuController implements Initializable {
             }
         }
     }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {}
 
     /*@FXML TODO
     public void removeUser(ActionEvent actionEvent) {

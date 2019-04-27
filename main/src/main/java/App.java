@@ -33,7 +33,6 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         FXMLLoader menuSceneLoader = new FXMLLoader(getClass().getResource("/menu/menu.fxml"));
-        //FXMLLoader menuSceneLoader = new FXMLLoader(menu);
         Parent root = menuSceneLoader.load();
 
         Scene scene = new Scene(root);

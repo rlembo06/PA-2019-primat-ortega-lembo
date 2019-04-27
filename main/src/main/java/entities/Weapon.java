@@ -13,6 +13,9 @@ public class Weapon {
         this.label = label;
     }
 
+    public Weapon() {
+    }
+
     public String getId() {
         return id;
     }

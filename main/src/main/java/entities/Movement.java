@@ -13,6 +13,9 @@ public class Movement {
         this.label = label;
     }
 
+    public Movement() {
+    }
+
     public String getId() {
         return id;
     }

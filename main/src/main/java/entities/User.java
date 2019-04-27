@@ -3,11 +3,17 @@ package entities;
 public class User {
     private int id;
     private String name = "Joueur";
-    private Weapon weapon;
-    private Movement movement;
+    private Weapon weapon = new Weapon();
+    private Movement movement = new Movement();
 
     public User(int id) {
         this.id = id;
+    }
+
+    public User(int id, Weapon weapon, Movement movement) {
+        this.id = id;
+        this.weapon = weapon;
+        this.movement = movement;
     }
 
     public int getId() {
@@ -44,6 +50,6 @@ public class User {
 
     @Override
     public String toString(){
-        return name;
+        return name + " " + id;
     }
 }

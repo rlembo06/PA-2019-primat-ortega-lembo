@@ -26,15 +26,8 @@ public class MenuController implements Initializable {
     @FXML
     private GridPane usersGridPane;
 
-    public MenuController() throws IOException, ClassNotFoundException {}
-
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Movements.loadList();
-        Movements.loadListName();
-        Weapons.loadList();
-        Weapons.loadListName();
-    }
+    public void initialize(URL location, ResourceBundle resources) {}
 
     private void launchArena() throws IOException {
         FXMLLoader arenaSceneLoader = new FXMLLoader(getClass().getResource("/arena/arena.fxml"));

@@ -4,5 +4,4 @@
 
 
 <AnchorPane fx:id="arena" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.arena.ArenaController">
-   <children></children>
 </AnchorPane>

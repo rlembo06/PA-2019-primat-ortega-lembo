@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.arena.ArenaController">
-   <children>
-      <Circle fx:id="player" fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-   </children>
+<AnchorPane fx:id="arena" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.arena.ArenaController">
+   <children></children>
 </AnchorPane>

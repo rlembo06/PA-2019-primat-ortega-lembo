@@ -1,9 +1,14 @@
 package controllers.arena;
 
+import entities.User;
+import entities.Users;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 import java.net.URL;
@@ -15,14 +20,25 @@ public class ArenaController implements Initializable {
     double orgTranslateX, orgTranslateY;
 
     @FXML
-    private Circle player;
+    private AnchorPane arena;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        player.setOnMousePressed(circleOnMousePressedEventHandler);
-        player.setOnMouseDragged(circleOnMouseDraggedEventHandler);
+        generateUsers();
     }
 
+    private void generateUsers() {
+        for (User user : Users.getList()) {
+            Circle player = new Circle(50.0f, Color.GREEN);
+            player.setCursor(Cursor.MOVE);
+            player.setCenterX(150);
+            player.setCenterY(150);
+            player.setOnMousePressed(circleOnMousePressedEventHandler);
+            player.setOnMouseDragged(circleOnMouseDraggedEventHandler);
+
+            arena.getChildren().add(player);
+        }
+    }
 
     EventHandler<MouseEvent> circleOnMousePressedEventHandler =
             new EventHandler<MouseEvent>() {

@@ -9,6 +9,7 @@ public class User {
     private String name = "Joueur";
     private Weapon weapon = new Weapon();
     private Movement movement = new Movement();
+    private int life = 100;
 
     public User(int id) {
         this.id = id;
@@ -34,6 +35,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getLife() {
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
     }
 
     public Weapon getWeapon() {

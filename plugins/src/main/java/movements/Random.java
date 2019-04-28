@@ -11,7 +11,7 @@ import javafx.scene.shape.Path;
 public class Random {
 
     @RandomPath
-    private void createPathPlayer(Node shape) {
+    public PathTransition createPathPlayer(Node shape) {
         PathTransition pathTransition = new PathTransition();
 
         pathTransition.setDuration(javafx.util.Duration.millis(1200));
@@ -24,7 +24,7 @@ public class Random {
             pathTransition.setPath(createRandomPath());
             pathTransition.play();
         });
-        pathTransition.play();
+        return pathTransition;
     }
 
     private Path createRandomPath() {

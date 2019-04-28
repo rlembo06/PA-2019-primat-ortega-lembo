@@ -2,44 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee28565-e3c1-432b-ba9d-365e1127a5b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/src/main/java/annotations/DragMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/main/java/annotations/RandomPath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/src/main/java/movements/DragMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/src/main/java/movements/Random.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/META-INF/main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Movement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Powerful.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Weapon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/menu/MenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Movement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Movements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Weapon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Weapons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/plugins/MovementPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/plugins/PluginLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/plugins/WeaponPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/main-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/Movements.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/Movements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/DragMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Movement.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/Movement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Movements.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/Movements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/main-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/main-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/src/main/java/movements/Movement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/plugins-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/miage/tpjeu/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/miage/tpjeu/AppTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,99 +45,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="41" selection-end-column="25" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1129">
-              <caret line="70" column="35" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1123">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="319">
+              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movements.java">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="34" column="42" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="42" />
+            <state relative-caret-position="520">
+              <caret line="41" column="80" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/DragMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1583#1584#0" expanded="true" />
-                <element signature="e#1638#1639#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/DragMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -173,8 +77,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -188,6 +92,7 @@
       <find>orgTranslateX</find>
       <find>usersGridPane</find>
       <find>ActionEvent</find>
+      <find>searchPlugin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,21 +124,22 @@
         <option value="$PROJECT_DIR$/main/src/main/resources/menu/test.fxml" />
         <option value="$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml" />
         <option value="$PROJECT_DIR$/main/src/main/java/entities/Weapon.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/entities/User.java" />
         <option value="$PROJECT_DIR$/main/src/main/resources/menu/arena.fxml" />
         <option value="$PROJECT_DIR$/main/src/main/java/entities/Users.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/entities/Movements.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/entities/Weapons.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/main/src/main/resources/arena/arena.fxml" />
-        <option value="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/annotations/RandomPath.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java" />
-        <option value="$PROJECT_DIR$/plugins/src/main/java/movements/Random.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/annotations/DragMove.java" />
         <option value="$PROJECT_DIR$/plugins/src/main/java/movements/DragMove.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/entities/Movements.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/Test.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/movements/Random.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/entities/User.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" />
       </list>
     </option>
   </component>
@@ -263,6 +169,41 @@
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,6 +255,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="plugins" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="main" />
@@ -324,6 +272,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Test" />
       </list>
@@ -350,13 +299,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71563000" />
+    <option name="totallyTimeSpent" value="75277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14362273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -366,14 +315,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36975718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30463576" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3178808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44812363" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.19757174" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -430,9 +379,7 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/target/classes/movements/Movement.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/target/classes/movements/Movement.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/weapons/Bazooka.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/miage/tpjeu/App.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -455,21 +402,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/MenuParameters.fxml" />
     <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/WeaponPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="280">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -496,24 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="1768" selection-start-line="1768" selection-end-line="1768" />
-          <folding>
-            <element signature="e#66921#66922#0" expanded="true" />
-            <element signature="e#66966#66967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -521,57 +440,6 @@
           <folding>
             <element signature="e#225#226#0" expanded="true" />
             <element signature="e#259#260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Weapons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,43 +495,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1129">
-          <caret line="70" column="35" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Movement.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -671,30 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/MovementPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="297">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -705,28 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1123">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,6 +538,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Weapons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_131/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="2440" selection-start-line="2440" selection-end-line="2440" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+            <element signature="e#66966#66967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#467#477#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1632#1633#0" expanded="true" />
+            <element signature="e#1670#1671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="41" column="80" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

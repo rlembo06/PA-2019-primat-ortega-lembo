@@ -1,5 +1,9 @@
 package entities;
 
+import javafx.scene.Node;
+
+import java.lang.reflect.InvocationTargetException;
+
 public class User {
     private int id;
     private String name = "Joueur";
@@ -46,6 +50,23 @@ public class User {
 
     public void setMovement(Movement movement) {
         this.movement = movement;
+    }
+
+    public void runMovementSelected(Node shape) {
+        String selected = movement.getLabel();
+        switch (selected) {
+            case "movements.Random": {
+                try {
+                    movement.randomPath(shape).play();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     @Override

@@ -1,5 +1,11 @@
 package entities;
 
+import annotations.RandomPath;
+import javafx.animation.PathTransition;
+import javafx.scene.Node;
+
+import java.lang.reflect.InvocationTargetException;
+
 public class Movement {
     private String id;
     private String label;
@@ -30,6 +36,11 @@ public class Movement {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public PathTransition randomPath(Node node) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> random = Movements.getPlugin().getClassByName("movements.Random");
+        return (PathTransition) Movements.getPlugin().getMethodsByAnnotation(random, RandomPath.class, node);
     }
 
     @Override

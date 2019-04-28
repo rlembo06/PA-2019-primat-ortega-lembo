@@ -42,6 +42,10 @@ public final class Movements {
         }
     }
 
+    public static MovementPlugin getPlugin() {
+        return plugin;
+    }
+
     public static List<Movement> getList() {
         return list;
     }

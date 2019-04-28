@@ -50,9 +50,6 @@ public class ArenaController implements Initializable {
             //player.setOnMousePressed(circleOnMousePressedEventHandler);
             //player.setOnMouseDragged(circleOnMouseDraggedEventHandler);
 
-            //stack.getChildren().addAll(player, playerName);
-            //stack.setOnMousePressed(circleOnMousePressedEventHandler);
-            //stack.setOnMouseDragged(circleOnMouseDraggedEventHandler);
 
             arena.getChildren().add(player);
             createPathPlayer(player);
@@ -62,7 +59,7 @@ public class ArenaController implements Initializable {
     private void createPathPlayer(Node shape) {
         PathTransition pathTransition = new PathTransition();
 
-        pathTransition.setDuration(javafx.util.Duration.millis(800));
+        pathTransition.setDuration(javafx.util.Duration.millis(1200));
         pathTransition.setPath(createRandomPath());
         pathTransition.setNode(shape);
         pathTransition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
@@ -77,46 +74,13 @@ public class ArenaController implements Initializable {
 
     private Path createRandomPath() {
         Random ran = new Random();
-        int loc = ran.nextInt(600 - 300 + 1) + 300; // min=300 , max=600
+        int loc = ran.nextInt(600 - 400 + 1) + 300;  // min=400 , max=600
 
         Path path = new Path();
-        path.getElements().add(new MoveTo(20, 20));
-        path.getElements().add(new LineTo(loc, 600));
+        path.getElements().add(new MoveTo(ran.nextInt(100), ran.nextInt(100)));
+        path.getElements().add(new LineTo(loc, ran.nextInt(350)));
 
         return path;
     }
-
-    EventHandler<MouseEvent> circleOnMousePressedEventHandler =
-            new EventHandler<MouseEvent>() {
-
-                @Override
-                public void handle(MouseEvent t) {
-                    orgSceneX = t.getSceneX();
-                    orgSceneY = t.getSceneY();
-                    //orgCenterX = ((Circle)(t.getSource())).getCenterX();
-                    //orgCenterY = ((Circle)(t.getSource())).getCenterY();
-                    orgTranslateX = ((Circle)(t.getSource())).getTranslateX();
-                    orgTranslateY = ((Circle)(t.getSource())).getTranslateY();
-                }
-            };
-
-    EventHandler<MouseEvent> circleOnMouseDraggedEventHandler =
-            new EventHandler<MouseEvent>() {
-
-                @Override
-                public void handle(MouseEvent t) {
-                    double offsetX = t.getSceneX() - orgSceneX;
-                    double offsetY = t.getSceneY() - orgSceneY;
-                    //double newCenterX = orgCenterX + offsetX;
-                    //double newCenterY = orgCenterY + offsetY;
-                    double newTranslateX = orgTranslateX + offsetX;
-                    double newTranslateY = orgTranslateY + offsetY;
-
-                    //((Circle)(t.getSource())).setCenterX(newCenterX);
-                    //((Circle)(t.getSource())).setCenterY(newCenterY);
-                    ((Circle)(t.getSource())).setTranslateX(newTranslateX);
-                    ((Circle)(t.getSource())).setTranslateY(newTranslateY);
-                }
-            };
 
 }

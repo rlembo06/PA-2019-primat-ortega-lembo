@@ -20,11 +20,11 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
 
-    //private int MIN_USERS = 1;
-    private int MAX_USERS = 3;
+    //private int MIN_PLAYERS = 1;
+    private int MAX_PLAYERS = 3;
 
     @FXML
-    private GridPane usersGridPane;
+    private GridPane playersGridPane;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {}
@@ -45,21 +45,21 @@ public class MenuController implements Initializable {
 
     @FXML
     public void startGame(ActionEvent actionEvent) throws IOException {
-        int countUsers = Users.getList().size();
+        int countPlayers = Players.getList().size();
 
-        if(countUsers >= 1) {
-            setUserItems();
+        if(countPlayers >= 1) {
+            setPlayerItems();
             launchArena();
             closeWindow(actionEvent);
 
 
             // CHANGES :
-            System.out.println("ALL USERS :");
-            for (User user : Users.getList()) {
+            System.out.println("ALL PLAYERS :");
+            for (Player player : Players.getList()) {
                 System.out.println(
-                        "- user: "+ user.getName()
-                                + " [Movement] " + user.getMovement()
-                                + " [Weapon] " + user.getWeapon()
+                        "- Player: "+ player.getName()
+                                + " [Movement] " + player.getMovement()
+                                + " [Weapon] " + player.getWeapon()
                 );
             }
         } else {
@@ -68,61 +68,61 @@ public class MenuController implements Initializable {
     }
 
     @FXML
-    public void addUser(ActionEvent actionEvent) {
-        int countUsers = Users.getList().size();
-        if(countUsers < MAX_USERS) {
-            User newUser = new User(countUsers++);
-            Users.getList().add(newUser);
+    public void addPlayer(ActionEvent actionEvent) {
+        int countPlayers = Players.getList().size();
+        if(countPlayers < MAX_PLAYERS) {
+            Player newPlayer = new Player(countPlayers++);
+            Players.getList().add(newPlayer);
 
             ComboBox<Weapon> weaponsComboBox = new ComboBox<>();
-            weaponsComboBox.setId("weapons-" + newUser.getId());
+            weaponsComboBox.setId("weapons-" + newPlayer.getId());
             ComboBox<Movement> movementsComboBox = new ComboBox<>();
-            movementsComboBox.setId("movements-" + newUser.getId());
+            movementsComboBox.setId("movements-" + newPlayer.getId());
 
             weaponsComboBox.getItems().addAll(Weapons.getList());
             movementsComboBox.getItems().addAll(Movements.getList());
 
-            usersGridPane.add(new Label(newUser.toString()), 0, countUsers);
-            usersGridPane.add(weaponsComboBox, 1, countUsers);
-            usersGridPane.add(movementsComboBox, 2, countUsers);
+            playersGridPane.add(new Label(newPlayer.toString()), 0, countPlayers);
+            playersGridPane.add(weaponsComboBox, 1, countPlayers);
+            playersGridPane.add(movementsComboBox, 2, countPlayers);
         }
     }
 
-    private void setUserItems() {
-        for (User user : Users.getList()) {;
-            for (Node child : usersGridPane.getChildren()) {
-                setMovementSelected(child, user);
-                setWeaponSelected(child, user);
+    private void setPlayerItems() {
+        for (Player player : Players.getList()) {;
+            for (Node child : playersGridPane.getChildren()) {
+                setMovementSelected(child, player);
+                setWeaponSelected(child, player);
             }
         }
     }
 
-    private void setMovementSelected(Node child, User user) {
+    private void setMovementSelected(Node child, Player player) {
         if(child.getId() != null) {
-            if(child.getId().equals("movements-" + user.getId())) {
+            if(child.getId().equals("movements-" + player.getId())) {
                 ComboBox<Movement> movementsComboBox = (ComboBox) child;
-                user.setMovement(movementsComboBox.getValue());;
+                player.setMovement(movementsComboBox.getValue());;
             }
         }
     }
 
-    private void setWeaponSelected(Node child, User user) {
+    private void setWeaponSelected(Node child, Player player) {
         if(child.getId() != null) {
-            if(child.getId().equals("weapons-" + user.getId())) {
+            if(child.getId().equals("weapons-" + player.getId())) {
                 ComboBox<Weapon> weaponsComboBox = (ComboBox) child;
-                user.setWeapon(weaponsComboBox.getValue());
+                player.setWeapon(weaponsComboBox.getValue());
             }
         }
     }
 
     /*@FXML TODO
-    public void removeUser(ActionEvent actionEvent) {
-        int countUsers = users.getList().size();
-        if(countUsers >= MIN_USERS) {
-            users.getList().remove(countUsers - 1);
-            System.out.println("count users: " + countUsers);
+    public void removePlayer(ActionEvent actionEvent) {
+        int countPlayers = players.getList().size();
+        if(countPlayers >= MIN_PLAYERS) {
+            players.getList().remove(countPlayers - 1);
+            System.out.println("count players: " + countPlayers);
 
-            usersGridPane.getChildren().set(countUsers, null);
+            playersGridPane.getChildren().set(countPlayers, null);
         }
     }*/
 

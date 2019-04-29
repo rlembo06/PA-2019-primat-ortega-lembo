@@ -4,18 +4,18 @@ import javafx.scene.Node;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class User {
+public class Player {
     private int id;
     private String name = "Joueur";
     private Weapon weapon = new Weapon();
     private Movement movement = new Movement();
     private int life = 100;
 
-    public User(int id) {
+    public Player(int id) {
         this.id = id;
     }
 
-    public User(int id, Weapon weapon, Movement movement) {
+    public Player(int id, Weapon weapon, Movement movement) {
         this.id = id;
         this.weapon = weapon;
         this.movement = movement;

@@ -1,7 +1,7 @@
 package controllers.arena;
 
-import entities.User;
-import entities.Users;
+import entities.Player;
+import entities.Players;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
@@ -27,33 +27,33 @@ public class ArenaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        generateUsers();
+        generatePlayers();
     }
 
-    private void generateUsers() {
-        for (User user : Users.getList()) {
-            Text playerName = new Text(user.toString());
+    private void generatePlayers() {
+        for (Player player : Players.getList()) {
+            Text playerName = new Text(player.toString());
             playerName.setBoundsType(TextBoundsType.VISUAL);
-            Circle player = new Circle( 30.0f, playerColor[user.getId()]);
 
-            player.setCursor(Cursor.MOVE);
-            player.setCenterX(150);
-            player.setCenterY(150);
+            Circle playerShape = new Circle( 30.0f, playerColor[player.getId()]);
 
-            arena.getChildren().add(player);
+            playerShape.setCursor(Cursor.MOVE);
+            playerShape.setCenterX(150);
+            playerShape.setCenterY(150);
 
-            user.runMovementSelected(player);
-            generePlayersLife(user);
+            arena.getChildren().add(playerShape);
+
+            player.runMovementSelected(playerShape);
+            generePlayersLife(player);
         }
     }
 
-    private void generePlayersLife(User user) {
-        Label playerNameLabel = new Label(user.toString());
-        Label playerLifeLabel = new Label(String.valueOf(user.getLife()));
-        playerNameLabel.setTextFill(playerColor[user.getId()]);
+    private void generePlayersLife(Player player) {
+        Label playerNameLabel = new Label(player.toString());
+        Label playerLifeLabel = new Label(String.valueOf(player.getLife()));
+        playerNameLabel.setTextFill(playerColor[player.getId()]);
 
-        playersLifeGridPane.add(playerNameLabel, 0, user.getId() + 1);
-        playersLifeGridPane.add(playerLifeLabel, 1, user.getId() + 1);
+        playersLifeGridPane.add(playerNameLabel, 0, player.getId() + 1);
+        playersLifeGridPane.add(playerLifeLabel, 1, player.getId() + 1);
     }
-
 }

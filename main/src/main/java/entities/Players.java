@@ -3,18 +3,18 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Users {
-    private static List<User> list = new ArrayList<>();
+public final class Players {
+    private static List<Player> list = new ArrayList<>();
     private static List<String> listName = new ArrayList<>();
 
-    private Users() {}
+    private Players() {}
 
-    public static List<User> getList() {
+    public static List<Player> getList() {
         return list;
     }
 
-    public static void setList(List<User> list) {
-        Users.list = list;
+    public static void setList(List<Player> list) {
+        Players.list = list;
     }
 
     public static List<String> getListName() {
@@ -22,6 +22,6 @@ public final class Users {
     }
 
     public static void setListName(List<String> listName) {
-        Users.listName = listName;
+        Players.listName = listName;
     }
 }

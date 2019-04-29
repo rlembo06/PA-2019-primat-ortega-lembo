@@ -28,7 +28,7 @@
         </font>
     </Label>
 
-    <GridPane fx:id="usersGridPane" GridPane.rowIndex="1">
+    <GridPane fx:id="playersGridPane" GridPane.rowIndex="1">
         <columnConstraints>
             <ColumnConstraints maxWidth="Infinity" minWidth="200.0" prefWidth="100.0" />
             <ColumnConstraints maxWidth="Infinity" minWidth="200.0" prefWidth="200.0" />
@@ -51,8 +51,8 @@
         <Label alignment="CENTER" prefWidth="200.0" text="Mouvement" GridPane.columnIndex="2" GridPane.rowIndex="0" />
     </GridPane>
 
-    <Button mnemonicParsing="false" text="Ajouter joueur" onAction="#addUser" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Button mnemonicParsing="false" text="Ajouter joueur" onAction="#addPlayer" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
     <Button mnemonicParsing="false" text="Jouer"  onAction="#startGame" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-    <!--<Button mnemonicParsing="false" onAction="#removeUser" prefWidth="200.0" text="Enlever joueur" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
+    <!--<Button mnemonicParsing="false" onAction="#removePlayer" prefWidth="200.0" text="Enlever joueur" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
 
 </GridPane>

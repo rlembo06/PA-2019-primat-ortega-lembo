@@ -58,7 +58,7 @@ public class MenuController implements Initializable {
             for (Player player : Players.getList()) {
                 System.out.println(
                         "- Player: "+ player.getName()
-                                + " [Movement] " + player.getMovement()
+                                + " [Shape] " + player.getShape()
                                 + " [Weapon] " + player.getWeapon()
                 );
             }
@@ -76,35 +76,50 @@ public class MenuController implements Initializable {
 
             ComboBox<Weapon> weaponsComboBox = new ComboBox<>();
             weaponsComboBox.setId("weapons-" + newPlayer.getId());
-            ComboBox<Movement> movementsComboBox = new ComboBox<>();
-            movementsComboBox.setId("movements-" + newPlayer.getId());
+            ComboBox<ShapePlayer> shapesComboBox = new ComboBox<>();
+            shapesComboBox.setId("shapes-" + newPlayer.getId());
+            //ComboBox<Movement> movementsComboBox = new ComboBox<>();
+            //movementsComboBox.setId("movements-" + newPlayer.getId());
 
             weaponsComboBox.getItems().addAll(Weapons.getList());
-            movementsComboBox.getItems().addAll(Movements.getList());
+            shapesComboBox.getItems().addAll(Shapes.getList());
+            //movementsComboBox.getItems().addAll(Movements.getList());
 
             playersGridPane.add(new Label(newPlayer.toString()), 0, countPlayers);
             playersGridPane.add(weaponsComboBox, 1, countPlayers);
-            playersGridPane.add(movementsComboBox, 2, countPlayers);
+            playersGridPane.add(shapesComboBox, 2, countPlayers);
+            //playersGridPane.add(movementsComboBox, 2, countPlayers);
         }
     }
 
     private void setPlayerItems() {
         for (Player player : Players.getList()) {;
             for (Node child : playersGridPane.getChildren()) {
-                setMovementSelected(child, player);
+                //setMovementSelected(child, player);
+                setShapeSelected(child, player);
                 setWeaponSelected(child, player);
             }
         }
     }
 
-    private void setMovementSelected(Node child, Player player) {
+    private void setShapeSelected(Node child, Player player) {
         if(child.getId() != null) {
-            if(child.getId().equals("movements-" + player.getId())) {
-                ComboBox<Movement> movementsComboBox = (ComboBox) child;
-                player.setMovement(movementsComboBox.getValue());;
+            if(child.getId().equals("shapes-" + player.getId())) {
+                ComboBox<ShapePlayer> shapesComboBox = (ComboBox) child;
+                player.setShape(shapesComboBox.getValue());
+                player.getShape().setLabel(shapesComboBox.getValue().getLabel());
             }
         }
     }
+
+    /*private void setMovementSelected(Node child, Player player) {
+        if(child.getId() != null) {
+            if(child.getId().equals("movements-" + player.getId())) {
+                ComboBox<Movement> movementsComboBox = (ComboBox) child;
+                player.setMovement(movementsComboBox.getValue());
+            }
+        }
+    }*/
 
     private void setWeaponSelected(Node child, Player player) {
         if(child.getId() != null) {

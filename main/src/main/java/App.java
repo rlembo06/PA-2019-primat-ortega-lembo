@@ -1,4 +1,5 @@
 import entities.Movements;
+import entities.Shapes;
 import entities.Weapons;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,8 @@ public class App extends Application {
         Movements.loadListName();
         Weapons.loadList();
         Weapons.loadListName();
+        Shapes.loadList();
+        Shapes.loadListName();
 
         FXMLLoader menuSceneLoader = new FXMLLoader(getClass().getResource("/menu/menu.fxml"));
         Parent root = menuSceneLoader.load();

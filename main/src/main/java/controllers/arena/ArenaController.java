@@ -71,12 +71,13 @@ public class ArenaController implements Initializable {
         for (Player player : Players.getList()) {
             player.setShape(
                 new ShapePlayer(
-                    player.getMovement(),
+                    player.getShape().getLabel(),
                     colors[player.getId()],
                     ran.nextInt(350),
                     ran.nextInt(250),
                     30,
-                    30)
+                    30
+                )
             );
             board.addShapePlayer(player.getShape());
         }
@@ -97,7 +98,7 @@ public class ArenaController implements Initializable {
             ShapePlayer shape = it.next();
             if (shape != currentShape) {
                 if (currentShape.getBoundingShape().getBoundsInParent().intersects(shape.getBoundingShape().getBoundsInParent())) {
-                    System.out.println(" it's a crash !!!");
+                    //System.out.println(" it's a crash !!!");
                     currentShape.handleCollision(board, shape);
                 }
             }

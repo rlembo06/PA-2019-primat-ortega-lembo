@@ -48,7 +48,7 @@
         <Label alignment="CENTER" prefWidth="200.0" text="Arme" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
         <!-- Movement column -->
-        <Label alignment="CENTER" prefWidth="200.0" text="Mouvement" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label alignment="CENTER" prefWidth="200.0" text="Forme" GridPane.columnIndex="2" GridPane.rowIndex="0" />
     </GridPane>
 
     <Button mnemonicParsing="false" text="Ajouter joueur" onAction="#addPlayer" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />

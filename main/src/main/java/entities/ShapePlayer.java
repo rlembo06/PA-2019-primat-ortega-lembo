@@ -1,5 +1,6 @@
 package entities;
 
+import annotations.shapes.*;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -12,6 +13,7 @@ import java.util.Random;
 
 public class ShapePlayer {
 
+    private String label;
     private int w =20;
     private int h = 20;
     private double x;
@@ -19,8 +21,14 @@ public class ShapePlayer {
     private double speedX;
     private double speedY;
     private Paint color;
-    private Movement movement = new Movement();
     private Random r = new Random();
+
+    public ShapePlayer() {
+    }
+
+    public ShapePlayer(String label) {
+        this.label = label;
+    }
 
     public ShapePlayer(Paint color, double x, double y, double speedX, double speedY) {
         this.color = color;
@@ -30,8 +38,8 @@ public class ShapePlayer {
         this.speedY = speedY;
     }
 
-    public ShapePlayer(Movement movement, Paint color, double x, double y, double speedX, double speedY) {
-        this.movement = movement;
+    public ShapePlayer(String label, Paint color, double x, double y, double speedX, double speedY) {
+        this.label = label;
         this.color = color;
         this.x = x;
         this.y = y;
@@ -51,11 +59,38 @@ public class ShapePlayer {
     }
 
     public void render(GraphicsContext gc) {
+        switch (label) {
+            case "shapes.Square": {
+                try {
+                    renderSquare(gc);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+            case "shapes.Circle": {
+                try {
+                    renderCircle(gc);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /*public void render(GraphicsContext gc) {
         Paint save = gc.getFill();
         gc.setFill(color);
         gc.fillRect(x, y, w, h);
         gc.setFill(save);
-    }
+    }*/
 
     /*public void render(GraphicsContext gc) {
         Paint save = gc.getFill();
@@ -65,7 +100,7 @@ public class ShapePlayer {
     }*/
 
     public void handleCollision(GameBoard b, ShapePlayer p) {
-        System.out.println("COLLISION !!!!!!!!!!!!!!");
+        //System.out.println("COLLISION !!!!!!!!!!!!!!");
     }
 
     /*public Shape getBoundingShape() {
@@ -76,60 +111,26 @@ public class ShapePlayer {
         return new Circle(w);
     }
 
-
-    public int getW() {
-        return w;
+    public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
+        Shapes.getPlugin().getMethodsByAnnotation(square, Square.class, gc, color, x, y, w, h);
     }
 
-    public void setW(int w) {
-        this.w = w;
+    public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");
+        Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class, gc, color, x, y, w, h);
     }
 
-    public int getH() {
-        return h;
+    public String getLabel() {
+        return label;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setLabel(String label) {
+        this.label = label;
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public double getSpeedX() {
-        return speedX;
-    }
-
-    public void setSpeedX(double speedX) {
-        this.speedX = speedX;
-    }
-
-    public double getSpeedY() {
-        return speedY;
-    }
-
-    public void setSpeedY(double speedY) {
-        this.speedY = speedY;
-    }
-
-    public Random getR() {
-        return r;
-    }
-
-    public void setR(Random r) {
-        this.r = r;
+    @Override
+    public String toString(){
+        return label;
     }
 }

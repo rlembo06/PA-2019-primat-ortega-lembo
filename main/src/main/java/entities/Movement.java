@@ -1,8 +1,7 @@
 package entities;
 
-import annotations.RandomPath;
+import annotations.movements.RandomPath;
 import javafx.animation.PathTransition;
-import javafx.scene.Node;
 
 import java.lang.reflect.InvocationTargetException;
 

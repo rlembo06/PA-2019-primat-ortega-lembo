@@ -12,8 +12,8 @@ public class Player {
     private String name = "Joueur";
     private Weapon weapon = new Weapon();
     private Movement movement = new Movement();
+    private ShapePlayer shape = new ShapePlayer();
     private int life = 100;
-    private ShapePlayer shape;
 
     public Player(int id) {
         this.id = id;

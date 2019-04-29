@@ -1,4 +1,4 @@
-package annotations;
+package annotations.movements;
 
 import java.lang.annotation.*;
 

@@ -1,4 +1,4 @@
-package annotations;
+package annotations.weapons;
 
 import java.lang.annotation.*;
 

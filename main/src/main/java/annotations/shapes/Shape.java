@@ -1,4 +1,4 @@
-package annotations;
+package annotations.shapes;
 
 import java.lang.annotation.*;
 

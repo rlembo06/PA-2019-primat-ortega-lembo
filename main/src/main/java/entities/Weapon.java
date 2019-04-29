@@ -5,7 +5,7 @@ public class Weapon {
     private String label;
     private int bulletCapacity;
 
-    public Weapon(String id, String label, int bulletCapacity) {
+    public Weapon() {
         this.id = id;
         this.label = label;
         this.bulletCapacity = bulletCapacity;

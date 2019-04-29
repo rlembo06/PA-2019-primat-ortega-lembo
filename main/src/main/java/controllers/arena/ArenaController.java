@@ -1,54 +1,42 @@
 package controllers.arena;
 
-import javafx.event.EventHandler;
+import entities.User;
+import entities.Users;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.Cursor;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-
+import javafx.scene.text.Text;
+import javafx.scene.text.TextBoundsType;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ArenaController implements Initializable {
 
-    double orgSceneX, orgSceneY;
-    double orgTranslateX, orgTranslateY;
-
     @FXML
-    private Circle player;
+    private AnchorPane arena;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        player.setOnMousePressed(circleOnMousePressedEventHandler);
-        player.setOnMouseDragged(circleOnMouseDraggedEventHandler);
+        generateUsers();
     }
 
+    private void generateUsers() {
+        for (User user : Users.getList()) {
+            Text playerName = new Text(user.toString());
+            playerName.setBoundsType(TextBoundsType.VISUAL);
+            Circle player = new Circle( 50.0f, Color.GREEN);
 
-    EventHandler<MouseEvent> circleOnMousePressedEventHandler =
-            new EventHandler<MouseEvent>() {
+            player.setCursor(Cursor.MOVE);
+            player.setCenterX(150);
+            player.setCenterY(150);
 
-                @Override
-                public void handle(MouseEvent t) {
-                    orgSceneX = t.getSceneX();
-                    orgSceneY = t.getSceneY();
-                    orgTranslateX = ((Circle)(t.getSource())).getTranslateX();
-                    orgTranslateY = ((Circle)(t.getSource())).getTranslateY();
-                }
-            };
+            arena.getChildren().add(player);
 
-    EventHandler<MouseEvent> circleOnMouseDraggedEventHandler =
-            new EventHandler<MouseEvent>() {
-
-                @Override
-                public void handle(MouseEvent t) {
-                    double offsetX = t.getSceneX() - orgSceneX;
-                    double offsetY = t.getSceneY() - orgSceneY;
-                    double newTranslateX = orgTranslateX + offsetX;
-                    double newTranslateY = orgTranslateY + offsetY;
-
-                    ((Circle)(t.getSource())).setTranslateX(newTranslateX);
-                    ((Circle)(t.getSource())).setTranslateY(newTranslateY);
-                }
-            };
+            user.runMovementSelected(player);
+        }
+    }
 
 }

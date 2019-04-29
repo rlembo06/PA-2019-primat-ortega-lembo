@@ -1,7 +1,9 @@
 package entities;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
@@ -52,17 +54,28 @@ public class ShapePlayer {
         Paint save = gc.getFill();
         gc.setFill(color);
         gc.fillRect(x, y, w, h);
-
         gc.setFill(save);
     }
+
+    /*public void render(GraphicsContext gc) {
+        Paint save = gc.getFill();
+        gc.setFill(color);
+        gc.fillOval(x, y, w, h);
+        gc.setFill(save);
+    }*/
 
     public void handleCollision(GameBoard b, ShapePlayer p) {
         System.out.println("COLLISION !!!!!!!!!!!!!!");
     }
 
-    public Shape getBoundingShape() {
+    /*public Shape getBoundingShape() {
         return new Rectangle(x,y,w,h);
+    }*/
+
+    public Shape getBoundingShape() {
+        return new Circle(w);
     }
+
 
     public int getW() {
         return w;

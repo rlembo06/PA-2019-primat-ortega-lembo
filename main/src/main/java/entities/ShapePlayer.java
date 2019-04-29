@@ -27,6 +27,8 @@ public class ShapePlayer {
     }
 
     public void update(double time, GameBoard b) {
+        x += speedX * time;
+        y += speedY * time;
         if ((this.x+w)>b.getWidth() || this.x < 0) {
             this.speedX=-this.speedX;
         }
@@ -50,7 +52,6 @@ public class ShapePlayer {
 
     public Shape getBoundingShape() {
         return new Rectangle(x,y,w,h);
-
     }
 
     public int getW() {

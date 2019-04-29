@@ -41,6 +41,7 @@ public class ArenaController implements Initializable {
         lastUpdateNanoTime = System.nanoTime();
         new AnimationTimer() {
             public void handle(long currentNanoTime) {
+                canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 1000000000.0;
                 generateGame(timeGame);
                 lastUpdateNanoTime = currentNanoTime;
@@ -67,9 +68,6 @@ public class ArenaController implements Initializable {
             ShapePlayer shape = shapes.next();
             shape.update(timeGame, board);
             shape.render(gripGraphicsContext);
-
-            //gripGraphicsContext.setFill(colors[player.getId()]);
-            //gripGraphicsContext.fillRect(ran.nextInt(600), ran.nextInt(400), 30, 30);
         }
     }
 }

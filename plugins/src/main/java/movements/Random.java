@@ -1,13 +1,14 @@
 package movements;
 
-import annotations.RandomPath;
+import annotations.movements.Movement;
+import annotations.movements.RandomPath;
 import javafx.animation.PathTransition;
 import javafx.scene.Node;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 
-@annotations.Movement
+@Movement
 public class Random {
 
     @RandomPath

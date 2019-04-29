@@ -1,7 +1,7 @@
 package weapons;
 
-import annotations.Powerful;
-import annotations.Weapon;
+import annotations.weapons.Powerful;
+import annotations.weapons.Weapon;
 
 @Weapon
 public class Bazooka {

@@ -1,18 +1,19 @@
 package controllers.arena;
 
+import entities.GameBoard;
 import entities.Player;
 import entities.Players;
+import entities.ShapePlayer;
+import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Cursor;
-import javafx.scene.control.Label;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextBoundsType;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class ArenaController implements Initializable {
@@ -20,40 +21,55 @@ public class ArenaController implements Initializable {
     @FXML
     private AnchorPane arena;
 
-    @FXML
-    private GridPane playersLifeGridPane;
+    private final Canvas canvas = new Canvas(600, 400);
+    private final GraphicsContext gripGraphicsContext = canvas.getGraphicsContext2D();
+    private final GameBoard board = new GameBoard(600, 400);
 
-    private Color[] playerColor = {Color.GREEN, Color.RED, Color.BLUE};
+    private long lastUpdateNanoTime;
+    private Color[] colors = {Color.GREEN, Color.RED, Color.BLUE};
+
+    private Random ran = new Random();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        generatePlayers();
+        arena.getChildren().add(canvas);
+        initGame();
     }
 
-    private void generatePlayers() {
+    private void initGame() {
+        generateShapePlayers();
+        lastUpdateNanoTime = System.nanoTime();
+        new AnimationTimer() {
+            public void handle(long currentNanoTime) {
+                double timeGame = (currentNanoTime - lastUpdateNanoTime) / 1000000000.0;
+                generateGame(timeGame);
+                lastUpdateNanoTime = currentNanoTime;
+            }
+        }.start();
+    }
+    
+    private void generateShapePlayers() {
         for (Player player : Players.getList()) {
-            Text playerName = new Text(player.toString());
-            playerName.setBoundsType(TextBoundsType.VISUAL);
-
-            Circle playerShape = new Circle( 30.0f, playerColor[player.getId()]);
-
-            playerShape.setCursor(Cursor.MOVE);
-            playerShape.setCenterX(150);
-            playerShape.setCenterY(150);
-
-            arena.getChildren().add(playerShape);
-
-            player.runMovementSelected(playerShape);
-            generePlayersLife(player);
+            player.setShape(new ShapePlayer(
+                    colors[player.getId()],
+                    ran.nextInt(600),
+                    ran.nextInt(400),
+                    30,
+                    30)
+            );
+            board.addShapePlayer(player.getShape());
         }
     }
 
-    private void generePlayersLife(Player player) {
-        Label playerNameLabel = new Label(player.toString());
-        Label playerLifeLabel = new Label(String.valueOf(player.getLife()));
-        playerNameLabel.setTextFill(playerColor[player.getId()]);
+    private void generateGame(double timeGame) {
+        Iterator<ShapePlayer> shapes = board.shapePlayerIterator();
+        while (shapes.hasNext()) {
+            ShapePlayer shape = shapes.next();
+            shape.update(timeGame, board);
+            shape.render(gripGraphicsContext);
 
-        playersLifeGridPane.add(playerNameLabel, 0, player.getId() + 1);
-        playersLifeGridPane.add(playerLifeLabel, 1, player.getId() + 1);
+            //gripGraphicsContext.setFill(colors[player.getId()]);
+            //gripGraphicsContext.fillRect(ran.nextInt(600), ran.nextInt(400), 30, 30);
+        }
     }
 }

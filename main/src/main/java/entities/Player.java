@@ -1,6 +1,9 @@
 package entities;
 
 import javafx.scene.Node;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Shape;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -10,6 +13,7 @@ public class Player {
     private Weapon weapon = new Weapon();
     private Movement movement = new Movement();
     private int life = 100;
+    private ShapePlayer shape;
 
     public Player(int id) {
         this.id = id;
@@ -20,6 +24,14 @@ public class Player {
         this.weapon = weapon;
         this.movement = movement;
     }
+
+    public Shape getBoundingShape() {
+        return null;
+    };
+
+    public void render(GraphicsContext gc, Paint color) {};
+
+    public void handleCollision(GameBoard b, Player p) {};
 
     public int getId() {
         return id;
@@ -59,6 +71,14 @@ public class Player {
 
     public void setMovement(Movement movement) {
         this.movement = movement;
+    }
+
+    public ShapePlayer getShape() {
+        return shape;
+    }
+
+    public void setShape(ShapePlayer shape) {
+        this.shape = shape;
     }
 
     public void runMovementSelected(Node shape) {

@@ -6,14 +6,23 @@ import annotations.Weapon;
 @Weapon
 public class Bazooka {
 
-    public int shot() {
-        return 10;
-    }
+    public int damage = 500;
+    public int maxAmmunition = 1;
 
     @Powerful
-    public int recharge(int bullets) { return bullets * 10; }
+    public int shot(int bullets) {
+        if(bullets == 0){
+            reload(bullets);
+        }else {
+            System.out.println("Shot!!!");
+            return damage;
+        }
+        return 1;
+    }
 
-    public String getBrand (String brand) { return "Its brand : " + brand; }
-
-
+    public int reload(int bullets){
+        System.out.println("Reloading....");
+        return bullets = maxAmmunition;
+    }
 }
+

@@ -3,18 +3,19 @@ package entities;
 public class Weapon {
     private String id;
     private String label;
+    private int bulletCapacity;
 
-    public Weapon(String id, String label) {
+    public Weapon(String id, String label, int bulletCapacity) {
         this.id = id;
         this.label = label;
+        this.bulletCapacity = bulletCapacity;
     }
 
     public Weapon(String label) {
         this.label = label;
     }
 
-    public Weapon() {
-    }
+    public int getBullets(){ return bulletCapacity;}
 
     public String getId() {
         return id;

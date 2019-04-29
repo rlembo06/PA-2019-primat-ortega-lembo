@@ -14,4 +14,6 @@ public class Bazooka {
     public int recharge(int bullets) { return bullets * 10; }
 
     public String getBrand (String brand) { return "Its brand : " + brand; }
+
+
 }

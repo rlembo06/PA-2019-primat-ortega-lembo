@@ -8,4 +8,30 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="arena" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.arena.ArenaController">
+    <children>
+        <GridPane fx:id="playersLifeGridPane" style="-fx-background-color: rgb(220, 220, 220);">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="20.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefWidth="100.0" text="Joueur(s)" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Label prefWidth="100.0" text="Vie" textAlignment="CENTER" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+    </children>
 </AnchorPane>

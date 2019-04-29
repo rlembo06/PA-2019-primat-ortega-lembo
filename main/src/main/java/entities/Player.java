@@ -81,7 +81,24 @@ public class Player {
         this.shape = shape;
     }
 
-    public void runMovementSelected(Node shape) {
+    public void runMovementSelected(double time, GameBoard b) {
+        String selected = movement.getLabel();
+        switch (selected) {
+            case "movements.Random": {
+                try {
+                    movement.randomMove(time, b);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /*public void runMovementSelected(Node shape) {
         String selected = movement.getLabel();
         switch (selected) {
             case "movements.Random": {
@@ -96,7 +113,7 @@ public class Player {
                 }
             }
         }
-    }
+    }*/
 
     @Override
     public String toString(){

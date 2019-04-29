@@ -5,6 +5,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Random;
 
 public class ShapePlayer {
@@ -16,9 +17,19 @@ public class ShapePlayer {
     private double speedX;
     private double speedY;
     private Paint color;
+    private Movement movement = new Movement();
     private Random r = new Random();
 
     public ShapePlayer(Paint color, double x, double y, double speedX, double speedY) {
+        this.color = color;
+        this.x = x;
+        this.y = y;
+        this.speedX = speedX;
+        this.speedY = speedY;
+    }
+
+    public ShapePlayer(Movement movement, Paint color, double x, double y, double speedX, double speedY) {
+        this.movement = movement;
         this.color = color;
         this.x = x;
         this.y = y;

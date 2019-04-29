@@ -39,14 +39,13 @@ public class ShapePlayer {
 
     public void render(GraphicsContext gc) {
         Paint save = gc.getFill();
-        System.out.println(" colors " + color );
         gc.setFill(color);
         gc.fillRect(x, y, w, h);
 
         gc.setFill(save);
     }
 
-    public void handleCollision(GameBoard b, Player p) {
+    public void handleCollision(GameBoard b, ShapePlayer p) {
         System.out.println("COLLISION !!!!!!!!!!!!!!");
     }
 

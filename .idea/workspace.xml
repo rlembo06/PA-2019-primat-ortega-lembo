@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee28565-e3c1-432b-ba9d-365e1127a5b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/target/classes/fr/unice/miage/sprite/RectangleSprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/example/target/classes/fr/unice/miage/sprite/RectangleSprite.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/ShapePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/ShapePlayer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,27 +35,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
+            <state relative-caret-position="117">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1207#1422#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#1207#1593#0" expanded="true" />
+                <element signature="e#1592#1593#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/src/main/java/fr/unice/miage/game/gui/GameGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="302">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#657#658#0" expanded="true" />
@@ -86,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/src/main/java/fr/unice/miage/sprite/RectangleSprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="114">
+              <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#605#606#0" expanded="true" />
@@ -130,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="502">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1347#1348#0" expanded="true" />
@@ -166,6 +150,9 @@
       <find>user</find>
       <find>getBoundingShape</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/example/</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -580,7 +567,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82685000" />
+    <option name="totallyTimeSpent" value="87145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
@@ -596,14 +583,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36975718" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30132452" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955848" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.21192053" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21192053" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -913,14 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/resources/arena/arena.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="193" selection-start-line="9" selection-start-column="193" selection-end-line="9" selection-end-column="193" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -931,16 +910,6 @@
             <element signature="e#1580#1581#0" expanded="true" />
             <element signature="e#1627#1628#0" expanded="true" />
             <element signature="e#1661#1662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1029,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/src/main/java/fr/unice/miage/sprite/RectangleSprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="114">
+          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#605#606#0" expanded="true" />
@@ -1041,10 +1010,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/resources/arena/arena.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="502">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1347#1348#0" expanded="true" />
@@ -1055,8 +1042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/src/main/java/fr/unice/miage/game/gui/GameGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="23" />
+        <state relative-caret-position="302">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#657#658#0" expanded="true" />
@@ -1071,12 +1058,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
+        <state relative-caret-position="117">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1207#1422#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1207#1593#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
           </folding>
         </state>
       </provider>

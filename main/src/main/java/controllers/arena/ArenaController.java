@@ -23,7 +23,7 @@ public class ArenaController implements Initializable {
 
     private final Canvas canvas = new Canvas(600, 400);
     private final GraphicsContext gripGraphicsContext = canvas.getGraphicsContext2D();
-    private final GameBoard board = new GameBoard(600, 400);
+    private final GameBoard board = new GameBoard(350, 250);
 
     private long lastUpdateNanoTime;
     private Color[] colors = {Color.GREEN, Color.RED, Color.BLUE};
@@ -33,6 +33,7 @@ public class ArenaController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         arena.getChildren().add(canvas);
+
         initGame();
     }
 
@@ -42,13 +43,17 @@ public class ArenaController implements Initializable {
         new AnimationTimer() {
             public void handle(long currentNanoTime) {
                 canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
-                double timeGame = (currentNanoTime - lastUpdateNanoTime) / 1000000000.0;
+
+                gripGraphicsContext.setFill(Color.AZURE);
+                gripGraphicsContext.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
+                double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
                 generateGame(timeGame);
                 lastUpdateNanoTime = currentNanoTime;
             }
         }.start();
     }
-    
+
     private void generateShapePlayers() {
         for (Player player : Players.getList()) {
             player.setShape(new ShapePlayer(
@@ -67,7 +72,21 @@ public class ArenaController implements Initializable {
         while (shapes.hasNext()) {
             ShapePlayer shape = shapes.next();
             shape.update(timeGame, board);
+            checkForCollision(shape, board.shapePlayerIterator());
             shape.render(gripGraphicsContext);
         }
+    }
+
+    private void checkForCollision(ShapePlayer currentShape, Iterator<ShapePlayer> it) {
+        while (it.hasNext()) {
+            ShapePlayer shape = it.next();
+            if (shape != currentShape) {
+                if (currentShape.getBoundingShape().getBoundsInParent().intersects(shape.getBoundingShape().getBoundsInParent())) {
+                    System.out.println(" it's a crash !!!");
+                    currentShape.handleCollision(board, shape);
+                }
+            }
+        }
+
     }
 }

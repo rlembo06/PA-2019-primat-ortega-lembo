@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee28565-e3c1-432b-ba9d-365e1127a5b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Star.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/src/main/java/shapes/Star.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/movements/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/movements/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/movements/RandomPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/movements/RandomPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Powerful.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Powerful.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/Shapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Movement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Powerful.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/RandomPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/Weapon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/menu/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/menu/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Movement.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/Movement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/target/classes/entities/ShapePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/ShapePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/menu/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/menu/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/target/classes/plugins/PluginLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/plugins/PluginLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/target/classes/shapes/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/target/classes/shapes/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/target/classes/shapes/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/target/classes/shapes/Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/target/plugins-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/target/plugins-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,17 +44,57 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
+        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1364#1750#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Star.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="44" column="98" selection-start-line="44" selection-start-column="98" selection-end-line="44" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -78,11 +102,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+            <state relative-caret-position="174">
+              <caret line="82" column="39" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#467#477#0" expanded="true" />
                 <element signature="e#544#545#0" expanded="true" />
                 <element signature="e#575#576#0" expanded="true" />
                 <element signature="e#851#852#0" expanded="true" />
@@ -92,27 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3045#3046#0" expanded="true" />
-                <element signature="e#3073#3074#0" expanded="true" />
-                <element signature="e#3115#3116#0" expanded="true" />
-                <element signature="e#3149#3150#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,10 +128,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java">
+        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="32" />
+            <state relative-caret-position="183">
+              <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,6 +167,8 @@
       <find>generateGame</find>
       <find>shape</find>
       <find>movement</find>
+      <find>invoke</find>
+      <find>circle</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/example/</dir>
@@ -168,13 +180,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/weapons/Bazooka.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/plugins/Weapon.java" />
-        <option value="$PROJECT_DIR$/main/src/main/java/plugins/Movement.java" />
         <option value="$PROJECT_DIR$/plugins/src/main/java/movements/Movement.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/plugins/pom.xml" />
-        <option value="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" />
         <option value="$PROJECT_DIR$/main/pom.xml" />
         <option value="$PROJECT_DIR$/main/src/main/java/Menu.fxml" />
         <option value="$PROJECT_DIR$/main/src/main/java/MenuParameters.fxml" />
@@ -209,8 +217,6 @@
         <option value="$PROJECT_DIR$/main/src/main/java/annotations/Square.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/annotations/shapes/Square.java" />
         <option value="$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java" />
-        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java" />
-        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml" />
@@ -218,7 +224,13 @@
         <option value="$PROJECT_DIR$/main/src/main/java/controllers/menu/MenuController.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/entities/Shapes.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java" />
+        <option value="$PROJECT_DIR$/main/src/main/java/annotations/shapes/TestAnnotation.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/TestAnnotation.java" />
         <option value="$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java" />
+        <option value="$PROJECT_DIR$/plugins/src/main/java/shapes/Star.java" />
       </list>
     </option>
   </component>
@@ -230,10 +242,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="27" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -243,6 +253,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,7 +294,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
@@ -292,18 +303,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="arena" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="shapes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
@@ -320,16 +321,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
@@ -356,6 +356,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="movements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
@@ -366,11 +375,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shapes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weapons" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -378,7 +395,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/src/main/resources/menu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TP-Java-Jeu-Adrien" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -472,16 +489,19 @@
       <workItem from="1556211010659" duration="15574000" />
       <workItem from="1556358747445" duration="28639000" />
       <workItem from="1556544248450" duration="1725000" />
+      <workItem from="1556611780998" duration="751000" />
+      <workItem from="1556616914503" duration="2964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96422000" />
+    <option name="totallyTimeSpent" value="100564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.25669882" />
+      <window_info content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.21436228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -491,14 +511,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36975718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44591612" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32781458" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30573952" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30463576" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -555,8 +575,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/MenuParameters.fxml" />
-    <entry file="file://$PROJECT_DIR$/main/src/main/resources/menu/menu.old.fxml" />
     <entry file="file://$PROJECT_DIR$/main/src/main/resources/menu/userSelection.fxml" />
     <entry file="file://$PROJECT_DIR$/main/src/main/resources/menu/test.fxml" />
     <entry file="jar:///usr/java/jdk1.8.0_131/src.zip!/java/util/function/Predicate.java">
@@ -756,12 +774,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/resources/arena/arena.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/shapes/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/shapes/Circle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -808,36 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/WeaponPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/MovementPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -848,23 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Shape.java" />
     <entry file="file://$PROJECT_DIR$/main/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -876,12 +841,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/resources/menu/menu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -918,16 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="98" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Shapes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -942,20 +897,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/WeaponPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/ShapePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/shapes/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/shapes/Star.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/movements/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/Movement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="263">
+          <caret line="44" column="98" selection-start-line="44" selection-start-column="98" selection-end-line="44" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        <state relative-caret-position="174">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#467#477#0" expanded="true" />
             <element signature="e#544#545#0" expanded="true" />
             <element signature="e#575#576#0" expanded="true" />
             <element signature="e#851#852#0" expanded="true" />
@@ -964,46 +992,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="198">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Circle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+        <state relative-caret-position="198">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1364#1750#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/ShapePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="513">
+          <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3045#3046#0" expanded="true" />
-            <element signature="e#3073#3074#0" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3149#3150#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/shapes/Star.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -9,6 +9,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Random;
 
 public class ShapePlayer {
@@ -82,6 +83,17 @@ public class ShapePlayer {
                     e.printStackTrace();
                 }
             }
+            case "shapes.Star": {
+                try {
+                    renderStar();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -111,14 +123,32 @@ public class ShapePlayer {
         return new Circle(w);
     }
 
-    public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    /*public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
         Shapes.getPlugin().getMethodsByAnnotation(square, Square.class, gc, color, x, y, w, h);
+    }*/
+
+    public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
+        Method method = Shapes.getPlugin().getMethodsByAnnotation(square, Square.class);
+        method.invoke(square.newInstance(), gc, color, x, y, w, h);
     }
+
+    /*public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");
+        Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class, gc, color, x, y, w, h);
+    }*/
 
     public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");
-        Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class, gc, color, x, y, w, h);
+        Method method = Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class);
+        method.invoke(circle.newInstance(), gc, color, x, y, w, h);
+    }
+
+    public void renderStar() throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> star = Shapes.getPlugin().getClassByName("shapes.Star");
+        Method method = Shapes.getPlugin().getMethodsByAnnotation(star, annotations.shapes.Star.class);
+        method.invoke(star.newInstance(), x, y, w, h);
     }
 
     public String getLabel() {

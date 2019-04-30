@@ -8,7 +8,7 @@ import javafx.scene.paint.Paint;
 public class Circle {
 
     @annotations.shapes.Circle
-    public void render(GraphicsContext gc, Paint color, int x, int y, int w, int h) {
+    public void render(GraphicsContext gc, Paint color, double x, double y, int w, int h) {
         Paint save = gc.getFill();
         gc.setFill(color);
         gc.fillOval(x, y, w, h);

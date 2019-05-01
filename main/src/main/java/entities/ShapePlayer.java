@@ -5,6 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
@@ -14,6 +15,7 @@ import java.util.Random;
 
 public class ShapePlayer {
 
+    private int idPlayer;
     private String label;
     private int w =20;
     private int h = 20;
@@ -22,7 +24,6 @@ public class ShapePlayer {
     private double speedX;
     private double speedY;
     private Paint color;
-    private Random r = new Random();
 
     public ShapePlayer() {
     }
@@ -31,15 +32,8 @@ public class ShapePlayer {
         this.label = label;
     }
 
-    public ShapePlayer(Paint color, double x, double y, double speedX, double speedY) {
-        this.color = color;
-        this.x = x;
-        this.y = y;
-        this.speedX = speedX;
-        this.speedY = speedY;
-    }
-
-    public ShapePlayer(String label, Paint color, double x, double y, double speedX, double speedY) {
+    public ShapePlayer(int idPlayer, String label, Paint color, double x, double y, double speedX, double speedY) {
+        this.idPlayer = idPlayer;
         this.label = label;
         this.color = color;
         this.x = x;
@@ -97,16 +91,29 @@ public class ShapePlayer {
         }
     }
 
-    public void handleCollision(GameBoard b, ShapePlayer p) {
-        //System.out.println("COLLISION !!!!!!!!!!!!!!");
+    public void handleCollision() {
+        for (Player player : Players.getList()) {
+            if(player.getId() == idPlayer && player.getLife() > 0) {
+                player.setLife(player.getLife() - 10);
+                System.out.println("[Player][ID: " + player.getId() + "] Life: " + player.getLife());
+            }
+        }
     }
 
-    /*public Shape getBoundingShape() {
-        return new Rectangle(x,y,w,h);
-    }*/
-
     public Shape getBoundingShape() {
-        return new Circle(w);
+        switch (label) {
+            case "shapes.Square": {
+                return new Rectangle(x,y,w,h);
+            }
+            case "shapes.Circle": {
+                return new Rectangle(x,y,w,w);
+            }
+            case "shapes.Star": {
+                return new Polygon(x,y,w,h);
+            }
+            default:
+                return new Rectangle(x,y,w,h);
+        }
     }
 
     public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {

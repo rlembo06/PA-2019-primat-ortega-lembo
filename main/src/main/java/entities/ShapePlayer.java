@@ -85,7 +85,7 @@ public class ShapePlayer {
             }
             case "shapes.Star": {
                 try {
-                    renderStar();
+                    renderStar(gc);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InvocationTargetException e) {
@@ -121,10 +121,10 @@ public class ShapePlayer {
         method.invoke(circle.newInstance(), gc, color, x, y, w, h);
     }
 
-    public void renderStar() throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    public void renderStar(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> star = Shapes.getPlugin().getClassByName("shapes.Star");
         Method method = Shapes.getPlugin().getMethodsByAnnotation(star, annotations.shapes.Star.class);
-        method.invoke(star.newInstance(), x, y, w, h);
+        method.invoke(star.newInstance(), gc, color, x, y, w, h);
     }
 
     public String getLabel() {

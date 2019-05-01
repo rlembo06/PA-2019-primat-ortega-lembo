@@ -97,20 +97,6 @@ public class ShapePlayer {
         }
     }
 
-    /*public void render(GraphicsContext gc) {
-        Paint save = gc.getFill();
-        gc.setFill(color);
-        gc.fillRect(x, y, w, h);
-        gc.setFill(save);
-    }*/
-
-    /*public void render(GraphicsContext gc) {
-        Paint save = gc.getFill();
-        gc.setFill(color);
-        gc.fillOval(x, y, w, h);
-        gc.setFill(save);
-    }*/
-
     public void handleCollision(GameBoard b, ShapePlayer p) {
         //System.out.println("COLLISION !!!!!!!!!!!!!!");
     }
@@ -123,21 +109,11 @@ public class ShapePlayer {
         return new Circle(w);
     }
 
-    /*public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
-        Shapes.getPlugin().getMethodsByAnnotation(square, Square.class, gc, color, x, y, w, h);
-    }*/
-
     public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
         Method method = Shapes.getPlugin().getMethodsByAnnotation(square, Square.class);
         method.invoke(square.newInstance(), gc, color, x, y, w, h);
     }
-
-    /*public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");
-        Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class, gc, color, x, y, w, h);
-    }*/
 
     public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");

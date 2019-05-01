@@ -1,6 +1,5 @@
 package entities;
 
-import javafx.scene.Node;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Shape;
@@ -97,23 +96,6 @@ public class Player {
             }
         }
     }
-
-    /*public void runMovementSelected(Node shape) {
-        String selected = movement.getLabel();
-        switch (selected) {
-            case "movements.Random": {
-                try {
-                    movement.randomPath(shape).play();
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }*/
 
     @Override
     public String toString(){

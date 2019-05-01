@@ -37,11 +37,6 @@ public class Movement {
         this.label = label;
     }
 
-    /*public PathTransition randomPath(Node node) throws IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> random = Movements.getPlugin().getClassByName("movements.Random");
-        return (PathTransition) Movements.getPlugin().getMethodsByAnnotation(random, RandomPath.class, node);
-    }*/
-
     public PathTransition randomMove(double time, GameBoard b) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> random = Movements.getPlugin().getClassByName("movements.Random");
         return (PathTransition) Movements.getPlugin().getMethodsByAnnotation(random, RandomPath.class, time, b);

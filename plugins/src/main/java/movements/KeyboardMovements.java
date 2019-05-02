@@ -1,11 +1,11 @@
 package movements;
 
-import annotations.Movement;
+import annotations.movements.Movement;
 import javafx.animation.PathTransition;
 import javafx.scene.Node;
 
-@annotations.Movement
-public class Xmovement {
+@Movement
+public class KeyboardMovements {
 
     private static final double KeyBoardSpeed = 40;
     

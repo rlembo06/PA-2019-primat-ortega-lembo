@@ -1,8 +1,7 @@
 package entities;
 
-import annotations.RandomPath;
+import annotations.movements.RandomPath;
 import javafx.animation.PathTransition;
-import javafx.scene.Node;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -38,9 +37,9 @@ public class Movement {
         this.label = label;
     }
 
-    public PathTransition randomPath(Node node) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    public PathTransition randomMove(double time, GameBoard b) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> random = Movements.getPlugin().getClassByName("movements.Random");
-        return (PathTransition) Movements.getPlugin().getMethodsByAnnotation(random, RandomPath.class, node);
+        return (PathTransition) Movements.getPlugin().getMethodsByAnnotation(random, RandomPath.class, time, b);
     }
 
     @Override

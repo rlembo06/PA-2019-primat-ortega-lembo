@@ -134,6 +134,14 @@ public class ShapePlayer {
         method.invoke(star.newInstance(), gc, color, x, y, w, h);
     }
 
+    public Paint getColor() {
+        return color;
+    }
+
+    public void setColor(Paint color) {
+        this.color = color;
+    }
+
     public String getLabel() {
         return label;
     }

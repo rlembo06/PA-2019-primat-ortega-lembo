@@ -5,20 +5,28 @@ import entities.Player;
 import entities.Players;
 import entities.ShapePlayer;
 import javafx.animation.AnimationTimer;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.VPos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.TextAlignment;
+
 import java.net.URL;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
 public class ArenaController implements Initializable {
+
+    private int LIFE_ROW_SIZE = 100;
+    private int LIFE_COL_SIZE = 30;
 
     @FXML
     private AnchorPane arena;
@@ -38,7 +46,6 @@ public class ArenaController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         arena.getChildren().add(canvas);
-        generateLifePlayers();
         generateShapePlayers();
         initGame();
     }
@@ -51,19 +58,38 @@ public class ArenaController implements Initializable {
 
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
                 generateGame(timeGame);
+                generateLifePlayers(gripGraphicsContext, Players.getList(), 10, 100, 30);
                 lastUpdateNanoTime = currentNanoTime;
             }
         }.start();
     }
 
-    private void generateLifePlayers() {
-        for (Player player : Players.getList()) {
-            Label playerNameLabel = new Label(player.toString());
-            Label playerLifeLabel = new Label(String.valueOf(player.getLife()));
-            playerNameLabel.setTextFill(colors[player.getId()]);
+    private void generateLifePlayers(GraphicsContext gripGraphicsContext, List<Player> players, int heightBarLife, int rowSize, int colSize) {
+        for (Player player : players) {
+            double maxWidth = rowSize;
+            double height = heightBarLife;
 
-            playersLifeGridPane.add(playerNameLabel, 0, player.getId() + 1);
-            playersLifeGridPane.add(playerLifeLabel, 1, player.getId() + 1);
+            double hp = player.getLife();
+
+            double percentage = hp/rowSize;
+            double width = percentage * maxWidth;
+
+            double x = rowSize;
+            double y = colSize * (player.getId() + 1) + 10;
+
+            gripGraphicsContext.setStroke(Color.BLACK);
+
+            // Player name
+            gripGraphicsContext.setTextBaseline(VPos.CENTER);
+            gripGraphicsContext.fillText(player.toString(), x - 90, y);
+
+            // Lifebar background
+            gripGraphicsContext.setFill(Color.GREY);
+            gripGraphicsContext.fillRect(x, y, maxWidth, height);
+
+            // Lifebar content
+            gripGraphicsContext.setFill(player.getShape().getColor());
+            gripGraphicsContext.fillRect(x, y, width, height);
         }
     }
 

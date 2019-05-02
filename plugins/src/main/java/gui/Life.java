@@ -25,11 +25,10 @@ public class Life {
             double x = rowSize;
             double y = colSize * (player.getId() + 1) + 10;
 
-            gripGraphicsContext.setStroke(Color.BLACK);
-
             // Player name
             gripGraphicsContext.setTextBaseline(VPos.CENTER);
             gripGraphicsContext.fillText(player.toString(), x - 90, y);
+            gripGraphicsContext.setStroke(Color.BLACK);
 
             // Lifebar background
             gripGraphicsContext.setFill(Color.GREY);

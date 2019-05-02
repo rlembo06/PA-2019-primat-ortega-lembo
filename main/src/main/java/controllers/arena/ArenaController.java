@@ -2,21 +2,16 @@ package controllers.arena;
 
 import entities.*;
 import javafx.animation.AnimationTimer;
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.VPos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.TextAlignment;
+import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -27,9 +22,6 @@ public class ArenaController implements Initializable {
 
     @FXML
     private AnchorPane arena;
-
-    @FXML
-    private GridPane playersLifeGridPane;
 
     private final Canvas canvas = new Canvas(600, 400);
     private final GraphicsContext gripGraphicsContext = canvas.getGraphicsContext2D();
@@ -55,7 +47,7 @@ public class ArenaController implements Initializable {
 
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
                 generateGame(timeGame);
-                GUI.renderLife(gripGraphicsContext, Players.getList(), 10, 100, 30);
+                GUI.renderLife(gripGraphicsContext, Players.getList(), 10, LIFE_ROW_SIZE, LIFE_COL_SIZE);
                 lastUpdateNanoTime = currentNanoTime;
             }
         }.start();
@@ -83,27 +75,30 @@ public class ArenaController implements Initializable {
         while (shapes.hasNext()) {
             ShapePlayer shape = shapes.next();
             shape.update(timeGame, board);
-            ArenaController.checkForCollision(shape, board.shapePlayerIterator());
+            ArenaController.checkCollisions();
             shape.render(gripGraphicsContext);
         }
     }
 
-    public static void checkForCollision(ShapePlayer currentShape, Iterator<ShapePlayer> it) {
-        while (it.hasNext()) {
-            ShapePlayer shape = it.next();
-            if (shape != currentShape) {
-                if (currentShape.getBoundingShape().getBoundsInParent().intersects(shape.getBoundingShape().getBoundsInParent())) {
-                    //System.out.println(" it's a crash !!!");
-                    new Thread(() -> {
-                        try {
-                            Thread.sleep(500);
-                            currentShape.handleCollision();
-                        }
-                        catch (Exception e){
-                            System.err.println(e);
-                        }
-                    }).start();
-                    currentShape.handleCollision();
+    private static void checkCollisions() {
+        Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
+        for (int i = 0; i < players.length; i++) {
+            for (int j = i+1; j < players.length; j++) {
+                Player p1 = players[i];
+                Player p2 = players[j];
+
+                double x1 = p1.getShape().getX();
+                double x2 = p2.getShape().getX();
+
+                double y1 = p1.getShape().getY();
+                double y2 = p2.getShape().getY();
+
+                Rectangle r1 = new Rectangle(x1, y1, p1.getShape().getW(), p1.getShape().getH());
+                Rectangle r2 = new Rectangle(x2, y2, p2.getShape().getW(), p2.getShape().getH());
+
+                if (r1.intersects(r2.getLayoutBounds())) {
+                    p1.handleCollision();
+                    p2.handleCollision();
                 }
             }
         }

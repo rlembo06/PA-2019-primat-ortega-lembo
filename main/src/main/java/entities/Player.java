@@ -1,5 +1,6 @@
 package entities;
 
+import constants.Damage;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Shape;
@@ -30,7 +31,12 @@ public class Player {
 
     public void render(GraphicsContext gc, Paint color) {};
 
-    public void handleCollision(GameBoard b, Player p) {};
+    public void handleCollision() {
+        if(life > 0) {
+            setLife(life - Damage.COLLISION);
+            System.out.println("[Player][ID: " + id + "] Life: " + life);
+        }
+    };
 
     public int getId() {
         return id;

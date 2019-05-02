@@ -1,17 +1,15 @@
 package entities;
 
 import annotations.shapes.*;
+import constants.Damage;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Random;
 
 public class ShapePlayer {
 
@@ -94,7 +92,7 @@ public class ShapePlayer {
     public void handleCollision() {
         for (Player player : Players.getList()) {
             if(player.getId() == idPlayer && player.getLife() > 0) {
-                player.setLife(player.getLife() - 10);
+                player.setLife(player.getLife() - Damage.COLLISION);
                 System.out.println("[Player][ID: " + player.getId() + "] Life: " + player.getLife());
             }
         }
@@ -148,6 +146,39 @@ public class ShapePlayer {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+
+    public int getW() {
+        return w;
+    }
+
+    public void setW(int w) {
+        this.w = w;
+    }
+
+    public int getH() {
+        return h;
+    }
+
+    public void setH(int h) {
+        this.h = h;
     }
 
     @Override

@@ -1,3 +1,4 @@
+import entities.GUI;
 import entities.Movements;
 import entities.Shapes;
 import entities.Weapons;
@@ -22,6 +23,7 @@ public class App extends Application {
         Weapons.loadListName();
         Shapes.loadList();
         Shapes.loadListName();
+        GUI.loadList();
 
         FXMLLoader menuSceneLoader = new FXMLLoader(getClass().getResource("/menu/menu.fxml"));
         Parent root = menuSceneLoader.load();

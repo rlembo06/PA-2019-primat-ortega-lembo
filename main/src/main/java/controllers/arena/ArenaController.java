@@ -1,9 +1,6 @@
 package controllers.arena;
 
-import entities.GameBoard;
-import entities.Player;
-import entities.Players;
-import entities.ShapePlayer;
+import entities.*;
 import javafx.animation.AnimationTimer;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -58,39 +55,10 @@ public class ArenaController implements Initializable {
 
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
                 generateGame(timeGame);
-                generateLifePlayers(gripGraphicsContext, Players.getList(), 10, 100, 30);
+                GUI.renderLife(gripGraphicsContext, Players.getList(), 10, 100, 30);
                 lastUpdateNanoTime = currentNanoTime;
             }
         }.start();
-    }
-
-    private void generateLifePlayers(GraphicsContext gripGraphicsContext, List<Player> players, int heightBarLife, int rowSize, int colSize) {
-        for (Player player : players) {
-            double maxWidth = rowSize;
-            double height = heightBarLife;
-
-            double hp = player.getLife();
-
-            double percentage = hp/rowSize;
-            double width = percentage * maxWidth;
-
-            double x = rowSize;
-            double y = colSize * (player.getId() + 1) + 10;
-
-            gripGraphicsContext.setStroke(Color.BLACK);
-
-            // Player name
-            gripGraphicsContext.setTextBaseline(VPos.CENTER);
-            gripGraphicsContext.fillText(player.toString(), x - 90, y);
-
-            // Lifebar background
-            gripGraphicsContext.setFill(Color.GREY);
-            gripGraphicsContext.fillRect(x, y, maxWidth, height);
-
-            // Lifebar content
-            gripGraphicsContext.setFill(player.getShape().getColor());
-            gripGraphicsContext.fillRect(x, y, width, height);
-        }
     }
 
     private void generateShapePlayers() {

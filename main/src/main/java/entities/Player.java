@@ -14,6 +14,8 @@ public class Player {
     private Movement movement = new Movement();
     private ShapePlayer shape = new ShapePlayer();
     private int life = 100;
+    private Location location;
+
 
     public Player(int id) {
         this.id = id;
@@ -23,6 +25,7 @@ public class Player {
         this.id = id;
         this.weapon = weapon;
         this.movement = movement;
+        //this.location = location;
     }
 
     public Shape getBoundingShape() {
@@ -102,6 +105,13 @@ public class Player {
             }
         }
     }
+
+    public Location getLocation() { return location; }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
 
     @Override
     public String toString(){

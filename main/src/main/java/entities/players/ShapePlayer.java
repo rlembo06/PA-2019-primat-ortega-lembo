@@ -2,7 +2,7 @@ package entities.players;
 
 import annotations.shapes.*;
 import constants.Damage;
-import entities.GameBoard;
+import entities.gui.GameBoard;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Polygon;

@@ -1,4 +1,4 @@
-package entities;
+package entities.gui;
 
 import entities.players.ShapePlayer;
 

@@ -1,6 +1,7 @@
 package controllers.arena;
 
-import entities.*;
+import entities.gui.GUI;
+import entities.gui.GameBoard;
 import entities.players.Player;
 import entities.players.Players;
 import entities.players.ShapePlayer;

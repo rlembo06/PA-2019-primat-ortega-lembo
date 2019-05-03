@@ -1,4 +1,4 @@
-import entities.GUI;
+import entities.gui.GUI;
 import entities.movements.Movements;
 import entities.players.Shapes;
 import entities.weapons.Weapons;

@@ -1,7 +1,7 @@
 package entities.movements;
 
 import annotations.movements.RandomPath;
-import entities.GameBoard;
+import entities.gui.GameBoard;
 import javafx.animation.PathTransition;
 
 import java.lang.reflect.InvocationTargetException;

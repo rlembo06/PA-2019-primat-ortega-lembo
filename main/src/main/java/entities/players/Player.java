@@ -1,7 +1,7 @@
 package entities.players;
 
 import constants.Damage;
-import entities.GameBoard;
+import entities.gui.GameBoard;
 import entities.weapons.Weapon;
 import entities.movements.Movement;
 import javafx.scene.canvas.GraphicsContext;

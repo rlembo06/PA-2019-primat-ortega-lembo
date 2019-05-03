@@ -1,7 +1,7 @@
 package gui;
 
 import annotations.gui.*;
-import entities.Player;
+import entities.players.Player;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

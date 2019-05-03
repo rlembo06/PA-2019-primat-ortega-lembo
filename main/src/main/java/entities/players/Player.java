@@ -1,6 +1,9 @@
-package entities;
+package entities.players;
 
 import constants.Damage;
+import entities.GameBoard;
+import entities.weapons.Weapon;
+import entities.movements.Movement;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Shape;

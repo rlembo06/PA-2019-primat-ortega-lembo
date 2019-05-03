@@ -1,5 +1,7 @@
 package entities;
 
+import entities.players.ShapePlayer;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 

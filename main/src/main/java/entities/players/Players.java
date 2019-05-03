@@ -1,4 +1,4 @@
-package entities;
+package entities.players;
 
 import java.util.ArrayList;
 import java.util.List;

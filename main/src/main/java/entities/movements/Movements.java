@@ -1,4 +1,4 @@
-package entities;
+package entities.movements;
 
 import plugins.MovementPlugin;
 

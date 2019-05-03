@@ -1,6 +1,11 @@
 package controllers.menu;
 
-import entities.*;
+import entities.players.Player;
+import entities.players.Players;
+import entities.players.ShapePlayer;
+import entities.players.Shapes;
+import entities.weapons.Weapon;
+import entities.weapons.Weapons;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,6 @@
-package entities;
+package entities.players;
 
-import plugins.MovementPlugin;
+import entities.players.ShapePlayer;
 import plugins.ShapePlugin;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package entities;
+package entities.weapons;
 
 public class Weapon {
     private String id;

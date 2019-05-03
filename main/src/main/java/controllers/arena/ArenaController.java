@@ -1,6 +1,9 @@
 package controllers.arena;
 
 import entities.*;
+import entities.players.Player;
+import entities.players.Players;
+import entities.players.ShapePlayer;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

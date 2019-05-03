@@ -1,7 +1,7 @@
 import entities.GUI;
-import entities.Movements;
-import entities.Shapes;
-import entities.Weapons;
+import entities.movements.Movements;
+import entities.players.Shapes;
+import entities.weapons.Weapons;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

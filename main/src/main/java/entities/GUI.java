@@ -1,5 +1,8 @@
 package entities;
 
+import entities.movements.Movement;
+import entities.players.Player;
+import entities.players.Shapes;
 import javafx.scene.canvas.GraphicsContext;
 import plugins.GUIPlugin;
 

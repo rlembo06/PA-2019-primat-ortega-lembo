@@ -1,4 +1,4 @@
-package entities;
+package entities.weapons;
 
 import plugins.WeaponPlugin;
 

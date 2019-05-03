@@ -14,7 +14,8 @@ import java.lang.reflect.Method;
 
 public class ShapePlayer {
 
-    private int idPlayer;
+    //private int idPlayer;
+    private Player player;
     private String label;
     private int w =20;
     private int h = 20;
@@ -31,8 +32,18 @@ public class ShapePlayer {
         this.label = label;
     }
 
-    public ShapePlayer(int idPlayer, String label, Paint color, double x, double y, double speedX, double speedY) {
+    /*public ShapePlayer(int idPlayer, String label, Paint color, double x, double y, double speedX, double speedY) {
         this.idPlayer = idPlayer;
+        this.label = label;
+        this.color = color;
+        this.x = x;
+        this.y = y;
+        this.speedX = speedX;
+        this.speedY = speedY;
+    }*/
+
+    public ShapePlayer(Player player, String label, Paint color, double x, double y, double speedX, double speedY) {
+        this.player = player;
         this.label = label;
         this.color = color;
         this.x = x;
@@ -91,13 +102,22 @@ public class ShapePlayer {
     }
 
     public void handleCollision() {
+        for (Player p : Players.getList()) {
+            if(p.getId() == player.getId() && p.getLife() > 0) {
+                p.setLife(p.getLife() - Damage.COLLISION);
+                System.out.println("[Player][ID: " + p.getId() + "] Life: " + p.getLife());
+            }
+        }
+    }
+
+    /*public void handleCollision() {
         for (Player player : Players.getList()) {
             if(player.getId() == idPlayer && player.getLife() > 0) {
                 player.setLife(player.getLife() - Damage.COLLISION);
                 System.out.println("[Player][ID: " + player.getId() + "] Life: " + player.getLife());
             }
         }
-    }
+    }*/
 
     public Shape getBoundingShape() {
         switch (label) {
@@ -180,6 +200,10 @@ public class ShapePlayer {
 
     public void setH(int h) {
         this.h = h;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 
     @Override

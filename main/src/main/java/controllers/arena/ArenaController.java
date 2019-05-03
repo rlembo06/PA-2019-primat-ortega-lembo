@@ -5,6 +5,7 @@ import entities.gui.GameBoard;
 import entities.players.Player;
 import entities.players.Players;
 import entities.players.ShapePlayer;
+import entities.weapons.Bullet;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +19,7 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.ResourceBundle;
+import javafx.scene.paint.Paint;
 
 public class ArenaController implements Initializable {
 
@@ -57,11 +59,28 @@ public class ArenaController implements Initializable {
         }.start();
     }
 
+    private void generateShoot(GraphicsContext graphicsContext, ShapePlayer shape) {
+
+        shape
+                .getPlayer()
+                .getWeapon()
+                .getBullets()
+                .add(new Bullet(shape.getX(), shape.getY()));
+
+        for (Bullet bullet : shape.getPlayer().getWeapon().getBullets()) {
+            Paint save = graphicsContext.getFill();
+            graphicsContext.setFill(Color.ORANGE);
+            graphicsContext.fillOval(bullet.getX(), bullet.getY(), 3, 3);
+            graphicsContext.setFill(save);
+            bullet.update();
+        }
+    }
+
     private void generateShapePlayers() {
         for (Player player : Players.getList()) {
             player.setShape(
                 new ShapePlayer(
-                    player.getId(),
+                    player,
                     player.getShape().getLabel(),
                     colors[player.getId()],
                     ran.nextInt(350),
@@ -81,6 +100,7 @@ public class ArenaController implements Initializable {
             shape.update(timeGame, board);
             ArenaController.checkCollisions();
             shape.render(gripGraphicsContext);
+            generateShoot(gripGraphicsContext, shape);
         }
     }
 

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee28565-e3c1-432b-ba9d-365e1127a5b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="388">
+              <caret line="152" column="59" lean-forward="true" selection-start-line="152" selection-start-column="59" selection-end-line="152" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
+            <state relative-caret-position="1134">
               <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding>
                 <element signature="e#387#388#0" expanded="true" />
@@ -157,11 +153,11 @@
       <find>invoke</find>
       <find>circle</find>
       <find>getBoundingShape</find>
-      <find>check</find>
       <find>generateGame</find>
-      <find>idPlayer</find>
       <find>Paint</find>
       <find>bullets</find>
+      <find>check</find>
+      <find>idPlayer</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/example/</dir>
@@ -415,15 +411,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="shapes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -535,18 +522,18 @@
       <workItem from="1556626890049" duration="635000" />
       <workItem from="1556702555506" duration="4316000" />
       <workItem from="1556815484870" duration="8501000" />
-      <workItem from="1556908504226" duration="4341000" />
+      <workItem from="1556908504226" duration="6043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118357000" />
+    <option name="totallyTimeSpent" value="120059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.085209005" />
+      <window_info content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.20096463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -556,14 +543,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36975718" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29690948" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.13576159" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3156733" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.049668875" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289183" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1046,20 +1033,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java">
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3273">
-          <caret line="204" column="31" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
+        <state relative-caret-position="672">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6072#6073#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
+        <state relative-caret-position="1134">
           <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="e#387#388#0" expanded="true" />
@@ -1082,24 +1072,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapon.java">
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="34" />
+        <state relative-caret-position="3273">
+          <caret line="204" column="31" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#6072#6073#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="388">
+          <caret line="152" column="59" lean-forward="true" selection-start-line="152" selection-start-column="59" selection-end-line="152" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

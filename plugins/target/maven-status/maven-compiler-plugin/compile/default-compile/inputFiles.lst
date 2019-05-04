@@ -1,7 +1,8 @@
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/shapes/Square.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/helpers/RenderWeapon.java
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/shapes/Star.java
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/gui/Life.java
-/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/Test.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/weapons/Shotgun.java
+/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/weapons/Gun.java
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/movements/Random.java
-/home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/weapons/Bazooka.java
 /home/romain/Documents/Cours/Cours-Master-MIAGE/Master-1/Semestre-2/UE-Composants_logiciels_Entreprise/Programmation_avancee/TP/TP-Jeu-ProgAvancee-M1-MIAGE/plugins/src/main/java/shapes/Circle.java

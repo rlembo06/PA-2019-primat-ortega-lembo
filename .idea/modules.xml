@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
-      <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/plugins/plugins.iml" filepath="$PROJECT_DIR$/plugins/plugins.iml" />
-      <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TP-OI-Prog_avancee-Jeu-M1-MIAGE.iml" filepath="$PROJECT_DIR$/.idea/TP-OI-Prog_avancee-Jeu-M1-MIAGE.iml" />
     </modules>
   </component>
 </project>

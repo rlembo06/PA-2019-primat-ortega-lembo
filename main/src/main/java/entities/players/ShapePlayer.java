@@ -3,18 +3,19 @@ package entities.players;
 import annotations.shapes.*;
 import constants.Damage;
 import entities.gui.GameBoard;
+import entities.weapons.Weapons;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
+import plugins.WeaponPlugin;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ShapePlayer {
 
-    //private int idPlayer;
     private Player player;
     private String label;
     private int w =20;
@@ -52,38 +53,45 @@ public class ShapePlayer {
         }
     }
 
+    public void renderWeapon(GraphicsContext gc) {
+        switch (player.getWeapon().getLabel()) {
+            case "weapons.Gun": {
+                try {
+                    renderGun(gc);
+                } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }
+            /*case "weapons.Shotgun": {
+                try {
+                    renderShotgun(gc);
+                } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
+                    e.printStackTrace();
+                }
+            }*/
+        }
+    }
+
     public void render(GraphicsContext gc) {
         switch (label) {
             case "shapes.Square": {
                 try {
                     renderSquare(gc);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                } catch (InstantiationException e) {
+                } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                     e.printStackTrace();
                 }
             }
             case "shapes.Circle": {
                 try {
                     renderCircle(gc);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                } catch (InstantiationException e) {
+                } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                     e.printStackTrace();
                 }
             }
             case "shapes.Star": {
                 try {
                     renderStar(gc);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                } catch (InstantiationException e) {
+                } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                     e.printStackTrace();
                 }
             }
@@ -115,22 +123,34 @@ public class ShapePlayer {
         }
     }
 
-    public void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    private void renderSquare(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> square = Shapes.getPlugin().getClassByName("shapes.Square");
         Method method = Shapes.getPlugin().getMethodsByAnnotation(square, Square.class);
         method.invoke(square.newInstance(), gc, color, x, y, w, h);
     }
 
-    public void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    private void renderCircle(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> circle = Shapes.getPlugin().getClassByName("shapes.Circle");
         Method method = Shapes.getPlugin().getMethodsByAnnotation(circle, annotations.shapes.Circle.class);
         method.invoke(circle.newInstance(), gc, color, x, y, w, h);
     }
 
-    public void renderStar(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+    private void renderStar(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> star = Shapes.getPlugin().getClassByName("shapes.Star");
         Method method = Shapes.getPlugin().getMethodsByAnnotation(star, annotations.shapes.Star.class);
         method.invoke(star.newInstance(), gc, color, x, y, w, h);
+    }
+
+    private void renderGun(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> gun = Weapons.getPlugin().getClassByName("weapons.Gun");
+        Method method = Weapons.getPlugin().getMethodsByAnnotation(gun, annotations.weapons.Gun.class);
+        method.invoke(gun.newInstance(), gc, this);
+    }
+
+    private void renderShotgun(GraphicsContext gc) throws IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<?> shotgun = Weapons.getPlugin().getClassByName("weapons.Shotgun");
+        Method method = Weapons.getPlugin().getMethodsByAnnotation(shotgun, annotations.weapons.Shotgun.class);
+        method.invoke(shotgun.newInstance(), gc, this);
     }
 
     public Paint getColor() {

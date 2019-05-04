@@ -7,13 +7,23 @@ public class Bullet {
     private double x, y, speedX, speedY;
     private int w = 3;
     private int h = 3;
+    private int damage;
     private boolean visible;
+
+    public Bullet(int damage, double startX, double startY, double speedX, double speedY){
+        this.damage = damage;
+        this.x = startX;
+        this.y = startY;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.visible = true;
+    }
 
     public Bullet(double startX, double startY){
         x = startX;
         y = startY;
-        speedX = 30;
-        speedY = 30;
+        speedX = 20;
+        speedY = 20;
         visible = true;
     }
 
@@ -72,4 +82,11 @@ public class Bullet {
         this.visible = visible;
     }
 
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
 }

@@ -86,6 +86,7 @@ public class PluginLoader {
         return null;
     }
 
+    // 1 ANNOTATION PAR METHODE
     public Method getMethodsByAnnotation (Class <?> cl, Class <? extends Annotation> annotation) throws IllegalAccessException, InstantiationException, InvocationTargetException {
         Method[] methods = cl.getMethods();
         for (Method method : methods) {

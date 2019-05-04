@@ -20,7 +20,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
-import javafx.scene.paint.Paint;
 
 public class ArenaController implements Initializable {
 
@@ -60,23 +59,6 @@ public class ArenaController implements Initializable {
         }.start();
     }
 
-    private void generateShoot(GraphicsContext graphicsContext, ShapePlayer shape, double timeGame) {
-
-        shape
-                .getPlayer()
-                .getWeapon()
-                .getBullets()
-                .add(new Bullet(shape.getX(), shape.getY()));
-
-        for (Bullet bullet : shape.getPlayer().getWeapon().getBullets()) {
-            bullet.update();
-            Paint save = graphicsContext.getFill();
-            graphicsContext.setFill(Color.ORANGE);
-            graphicsContext.fillOval(bullet.getX(), bullet.getY(), bullet.getW(), bullet.getH());
-            graphicsContext.setFill(save);
-        }
-    }
-
     private void generateShapePlayers() {
         for (Player player : Players.getList()) {
             player.setShape(
@@ -86,8 +68,8 @@ public class ArenaController implements Initializable {
                     colors[player.getId()],
                     ran.nextInt(350),
                     ran.nextInt(250),
-                    30,
-                    30
+                    20,
+                    20
                 )
             );
             board.addShapePlayer(player.getShape());
@@ -101,7 +83,7 @@ public class ArenaController implements Initializable {
             shape.update(timeGame, board);
             ArenaController.checkCollisions();
             shape.render(gripGraphicsContext);
-            generateShoot(gripGraphicsContext, shape, timeGame);
+            shape.renderWeapon(gripGraphicsContext);
             ArenaController.checkAttackWeapon(shape.getPlayer());
         }
     }
@@ -128,7 +110,7 @@ public class ArenaController implements Initializable {
                 Rectangle r2 = new Rectangle(x2, y2, player.getShape().getW(), player.getShape().getH());
 
                 if (r1.intersects(r2.getLayoutBounds())) {
-                    System.out.println("TOUCH !!");
+                    player.setLife(player.getLife() - bullet.getDamage());
                 }
             }
         }
@@ -151,8 +133,8 @@ public class ArenaController implements Initializable {
                 Rectangle r2 = new Rectangle(x2, y2, p2.getShape().getW(), p2.getShape().getH());
 
                 if (r1.intersects(r2.getLayoutBounds())) {
-                    //p1.handleCollision();
-                    //p2.handleCollision();
+                    p1.handleCollision();
+                    p2.handleCollision();
                 }
             }
         }

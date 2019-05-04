@@ -42,4 +42,8 @@ public final class Weapons {
         return list;
     }
 
+
+    public static WeaponPlugin getPlugin() {
+        return plugin;
+    }
 }

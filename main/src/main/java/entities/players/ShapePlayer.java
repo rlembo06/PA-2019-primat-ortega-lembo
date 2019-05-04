@@ -25,22 +25,11 @@ public class ShapePlayer {
     private double speedY;
     private Paint color;
 
-    public ShapePlayer() {
-    }
+    public ShapePlayer() {}
 
     public ShapePlayer(String label) {
         this.label = label;
     }
-
-    /*public ShapePlayer(int idPlayer, String label, Paint color, double x, double y, double speedX, double speedY) {
-        this.idPlayer = idPlayer;
-        this.label = label;
-        this.color = color;
-        this.x = x;
-        this.y = y;
-        this.speedX = speedX;
-        this.speedY = speedY;
-    }*/
 
     public ShapePlayer(Player player, String label, Paint color, double x, double y, double speedX, double speedY) {
         this.player = player;
@@ -109,15 +98,6 @@ public class ShapePlayer {
             }
         }
     }
-
-    /*public void handleCollision() {
-        for (Player player : Players.getList()) {
-            if(player.getId() == idPlayer && player.getLife() > 0) {
-                player.setLife(player.getLife() - Damage.COLLISION);
-                System.out.println("[Player][ID: " + player.getId() + "] Life: " + player.getLife());
-            }
-        }
-    }*/
 
     public Shape getBoundingShape() {
         switch (label) {

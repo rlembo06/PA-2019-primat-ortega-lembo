@@ -60,7 +60,7 @@ public class ArenaController implements Initializable {
         }.start();
     }
 
-    private void generateShoot(GraphicsContext graphicsContext, ShapePlayer shape) {
+    private void generateShoot(GraphicsContext graphicsContext, ShapePlayer shape, double timeGame) {
 
         shape
                 .getPlayer()
@@ -69,11 +69,11 @@ public class ArenaController implements Initializable {
                 .add(new Bullet(shape.getX(), shape.getY()));
 
         for (Bullet bullet : shape.getPlayer().getWeapon().getBullets()) {
+            bullet.update();
             Paint save = graphicsContext.getFill();
             graphicsContext.setFill(Color.ORANGE);
-            graphicsContext.fillOval(bullet.getX(), bullet.getY(), 3, 3);
+            graphicsContext.fillOval(bullet.getX(), bullet.getY(), bullet.getW(), bullet.getH());
             graphicsContext.setFill(save);
-            bullet.update();
         }
     }
 
@@ -101,56 +101,31 @@ public class ArenaController implements Initializable {
             shape.update(timeGame, board);
             ArenaController.checkCollisions();
             shape.render(gripGraphicsContext);
-            generateShoot(gripGraphicsContext, shape);
-            ArenaController.checkAttackWeapon();
+            generateShoot(gripGraphicsContext, shape, timeGame);
+            ArenaController.checkAttackWeapon(shape.getPlayer());
         }
     }
 
-    /*private static void checkAttackWeapon() {
+    private static void checkAttackWeapon(Player currentPlayer) {
         Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
         for (int i = 0; i < players.length; i++) {
-            for (int j = i+1; j < players.length; j++) {
-                Player p1 = players[i];
-                Player p2 = players[j];
 
-                List<Bullet> bulletsP1 =  p1.getShape().getPlayer().getWeapon().getBullets();
-                List<Bullet> bulletsP2 =  p2.getShape().getPlayer().getWeapon().getBullets();
-                Bullet bulletP1 = bulletsP1.get(bulletsP1.size()-1);
-                Bullet bulletP2 = bulletsP2.get(bulletsP2.size()-1);
+            List<Bullet> bullets = players[i].getWeapon().getBullets();
+            for (int j = i+1; j < bullets.size(); j++) {
 
-                double x1 = bulletP1.getX();
-                double x2 = bulletP2.getX();
+                Player player = players[i];
 
-                double y1 = bulletP1.getY();
-                double y2 = bulletP2.getY();
-
-                Rectangle r1 = new Rectangle(x1, y1, p1.getShape().getW(), p1.getShape().getH());
-                Rectangle r2 = new Rectangle(x2, y2, p2.getShape().getW(), p2.getShape().getH());
-
-                if (r1.intersects(r2.getLayoutBounds())) {
-                    System.out.println("TOUCH !!");
-                }
-            }
-        }
-    }*/
-
-    private static void checkAttackWeapon() {
-        Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
-        for (int i = 0; i < players.length; i++) {
-            for (int j = i+1; j < players.length; j++) {
-                Player p1 = players[i];
-                Player p2 = players[j];
-
-                Bullet bullet =  p1.getShape().getPlayer().getWeapon().getBullets().get(0);
+                if(player.equals(currentPlayer)) continue;
+                Bullet bullet = bullets.get(j);
 
                 double x1 = bullet.getX();
-                double x2 = p2.getShape().getX();
+                double x2 = player.getShape().getX();
 
                 double y1 = bullet.getY();
-                double y2 = p2.getShape().getY();
+                double y2 = player.getShape().getY();
 
-                Rectangle r1 = new Rectangle(x1, y1, p1.getShape().getW(), p1.getShape().getH());
-                Rectangle r2 = new Rectangle(x2, y2, 3, 3);
+                Rectangle r1 = new Rectangle(x1, y1, bullet.getW(), bullet.getH());
+                Rectangle r2 = new Rectangle(x2, y2, player.getShape().getW(), player.getShape().getH());
 
                 if (r1.intersects(r2.getLayoutBounds())) {
                     System.out.println("TOUCH !!");

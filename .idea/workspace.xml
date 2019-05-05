@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20dc8e8d-07dc-483f-83fe-dbbd5bcd34be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Gun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Shotgun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/src/main/java/helpers/RenderWeapon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/src/main/java/weapons/Shotgun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/annotations/weapons/Powerful.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapons.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/entities/weapons/Weapons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/src/main/java/plugins/PluginLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/META-INF/main.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/annotations/weapons/Powerful.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/controllers/arena/ArenaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/players/ShapePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/players/ShapePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/weapons/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/weapons/Bullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/entities/weapons/Weapons.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/entities/weapons/Weapons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/target/classes/plugins/PluginLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/main/target/classes/plugins/PluginLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/src/main/java/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/src/main/java/weapons/Bazooka.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/src/main/java/weapons/Gun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/classes/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/classes/weapons/Bazooka.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/target/plugins-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/target/plugins-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/plugins/target/" />
@@ -43,92 +19,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/helpers/RenderWeapon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="14" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Gun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Shotgun.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="64" column="14" selection-start-line="64" selection-start-column="12" selection-end-line="70" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/weapons/Bullet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding>
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1275#1276#0" expanded="true" />
-                <element signature="e#1316#1317#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/Players.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#323#324#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -180,7 +71,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,23 +98,6 @@
             </path>
             <path>
               <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="players" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -244,28 +117,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TP-Jeu-ProgAvancee-M1-MIAGE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weapons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,18 +173,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556964423006</updated>
-      <workItem from="1556964425720" duration="14079000" />
+      <workItem from="1556964425720" duration="14849000" />
+      <workItem from="1557051174992" duration="898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14605000" />
+    <option name="totallyTimeSpent" value="16273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.14576635" />
+      <window_info active="true" content_ui="combo" x="774" y="74" width="372" height="906" id="Project" order="0" visible="true" weight="0.2808146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -336,14 +194,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36975718" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.21412803" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21412803" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.27924946" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2803532" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.4746137" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -415,13 +273,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/weapons/Powerful.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/weapons/Powerful.java" />
     <entry file="file://$PROJECT_DIR$/main/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -492,16 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/Players.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/main/java/annotations/weapons/Gun.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -513,6 +355,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1930">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Shotgun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Gun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/helpers/RenderWeapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1351">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -529,50 +418,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/helpers/RenderWeapon.java">
+    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/Players.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Gun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/controllers/arena/ArenaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/src/main/java/weapons/Shotgun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/main/java/entities/players/ShapePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="64" column="14" selection-start-line="64" selection-start-column="12" selection-end-line="70" selection-end-column="15" />
         </state>
       </provider>
     </entry>

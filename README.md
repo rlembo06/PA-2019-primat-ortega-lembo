@@ -44,3 +44,7 @@
         </ul>
     </li>
 </ul>
+
+## Exécuter le projet
+
+Sur Intellij : Exécuter le fichier "App.java"

@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -56,7 +57,7 @@ public final class MenuController implements Initializable {
     public void startGame(ActionEvent actionEvent) throws IOException {
         int countPlayers = Players.getList().size();
 
-        if(countPlayers >= 1) {
+        if(countPlayers >= 2) {
             setPlayerItems();
             launchArena();
             closeWindow(actionEvent);
@@ -73,6 +74,10 @@ public final class MenuController implements Initializable {
             }
         } else {
             System.out.println("Not enough players");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setContentText("Ajouter au moins 2 joueur!");
+            alert.showAndWait();
         }
     }
 

@@ -42,4 +42,8 @@ public class GameBoard {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public ArrayList<ShapePlayer> getList() {
+        return list;
+    }
 }

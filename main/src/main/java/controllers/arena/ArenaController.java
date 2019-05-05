@@ -9,17 +9,14 @@ import entities.players.ShapePlayer;
 import entities.weapons.Bullet;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.Iterator;
@@ -36,7 +33,7 @@ public final class ArenaController implements Initializable {
     private AnchorPane arena;
 
     private final Canvas canvas = new Canvas(600, 400);
-    private final GraphicsContext gripGraphicsContext = canvas.getGraphicsContext2D();
+    private GraphicsContext gripGraphicsContext = canvas.getGraphicsContext2D();
     private static GameBoard board = new GameBoard(350, 250);
 
     private long lastUpdateNanoTime;
@@ -57,7 +54,7 @@ public final class ArenaController implements Initializable {
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long currentNanoTime) {
-                canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+                gripGraphicsContext.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
                 generateGame(timeGame, animationTimer);
@@ -99,19 +96,22 @@ public final class ArenaController implements Initializable {
         }
     }
 
-    private static void checkWinner(AnimationTimer animationTimer) {
+    private void checkWinner(AnimationTimer animationTimer) {
         Alert alertWinner = new Alert(Alert.AlertType.INFORMATION);
-
         int countLooser = 0;
-        Player winner = null;
-        for (Player player : Players.getList()) {
-            if(player.getLife() == 0) {
+        Player winner = new Player();
+
+        for (ShapePlayer shapePlayer : board.getList()) {
+            if(shapePlayer.getPlayer().getLife() == 0) {
                 countLooser += 1;
-                //Players.getList().remove(player);
+                board.getList().remove(shapePlayer);
             }
-            else winner = player;
+            else {
+                winner = shapePlayer.getPlayer();
+            }
+
         }
-        if(Players.getList().size() - countLooser == 1) {
+        if((board.getList().size() - countLooser) <= 1) {
             animationTimer.stop();
             System.out.println("Le joueur " + winner.getName() + " a gagné !");
 
@@ -122,7 +122,7 @@ public final class ArenaController implements Initializable {
         }
     }
 
-    private static void checkAttackWeapon(Player currentPlayer, AnimationTimer animationTimer) {
+    private void checkAttackWeapon(Player currentPlayer, AnimationTimer animationTimer) {
         Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
         for (int i = 0; i < players.length; i++) {
 
@@ -151,7 +151,7 @@ public final class ArenaController implements Initializable {
         }
     }
 
-    private static void checkCollisions(AnimationTimer animationTimer) {
+    private void checkCollisions(AnimationTimer animationTimer) {
         Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
         for (int i = 0; i < players.length; i++) {
             for (int j = i+1; j < players.length; j++) {
@@ -169,7 +169,6 @@ public final class ArenaController implements Initializable {
 
                 if (r1.intersects(r2.getLayoutBounds())) {
                     p1.handleCollision();
-                    p2.handleCollision();
                     checkWinner(animationTimer);
                 }
             }

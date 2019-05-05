@@ -18,6 +18,9 @@ public class Player {
     private ShapePlayer shape = new ShapePlayer();
     private int life = 100;
 
+    public Player() {
+    }
+
     public Player(int id) {
         this.id = id;
     }

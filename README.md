@@ -45,6 +45,14 @@
     </li>
 </ul>
 
+### Modules 
+
+<ul>
+    <li>main : Module principal du projet, qui importe les plugins depuis le module "plugins". Comporte également les interfaces du jeu.</li>
+    <li>plugins : Module comportant tous les plugins (voir ci-dessus).</li>
+    <li>example : Projet du professeur servant d'exemple.</li>
+</ul>
+
 ## Exécuter le projet
 
 Sur Intellij : Exécuter le fichier "App.java"

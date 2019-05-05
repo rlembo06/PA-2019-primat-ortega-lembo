@@ -22,8 +22,8 @@ public class Bullet {
     public Bullet(double startX, double startY){
         x = startX;
         y = startY;
-        speedX = 20;
-        speedY = 20;
+        speedX = 100;
+        speedY = 100;
         visible = true;
     }
 

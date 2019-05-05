@@ -8,13 +8,18 @@ import entities.players.Players;
 import entities.players.ShapePlayer;
 import entities.weapons.Bullet;
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.Iterator;
@@ -38,6 +43,7 @@ public final class ArenaController implements Initializable {
     private Color[] colors = {Color.GREEN, Color.RED, Color.BLUE};
 
     private Random ran = new Random();
+    private static AnimationTimer animationTimer = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -48,16 +54,19 @@ public final class ArenaController implements Initializable {
 
     private void initGame() {
         lastUpdateNanoTime = System.nanoTime();
-        new AnimationTimer() {
+        animationTimer = new AnimationTimer() {
+            @Override
             public void handle(long currentNanoTime) {
                 canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
 
                 double timeGame = (currentNanoTime - lastUpdateNanoTime) / 300000000.0;
-                generateGame(timeGame);
+                generateGame(timeGame, animationTimer);
                 GUI.renderLife(gripGraphicsContext, Players.getList(), 10, LIFE_ROW_SIZE, LIFE_COL_SIZE);
                 lastUpdateNanoTime = currentNanoTime;
+                //checkWinner();
             }
-        }.start();
+        };
+        animationTimer.start();
     }
 
     private void generateShapePlayers() {
@@ -77,19 +86,43 @@ public final class ArenaController implements Initializable {
         }
     }
 
-    private void generateGame(double timeGame) {
+    private void generateGame(double timeGame, AnimationTimer animationTimer) {
         Iterator<ShapePlayer> shapes = board.shapePlayerIterator();
         while (shapes.hasNext()) {
             ShapePlayer shape = shapes.next();
             shape.update(timeGame, board);
-            if(MenuController.isWithCollision()) ArenaController.checkCollisions();
+            if(MenuController.isWithCollision()) checkCollisions(animationTimer);
             shape.render(gripGraphicsContext);
             shape.renderWeapon(gripGraphicsContext);
-            ArenaController.checkAttackWeapon(shape.getPlayer());
+            checkAttackWeapon(shape.getPlayer(), animationTimer);
+            //checkWinner();
         }
     }
 
-    private static void checkAttackWeapon(Player currentPlayer) {
+    private static void checkWinner(AnimationTimer animationTimer) {
+        Alert alertWinner = new Alert(Alert.AlertType.INFORMATION);
+
+        int countLooser = 0;
+        Player winner = null;
+        for (Player player : Players.getList()) {
+            if(player.getLife() == 0) {
+                countLooser += 1;
+                //Players.getList().remove(player);
+            }
+            else winner = player;
+        }
+        if(Players.getList().size() - countLooser == 1) {
+            animationTimer.stop();
+            System.out.println("Le joueur " + winner.getName() + " a gagné !");
+
+            alertWinner.setTitle("Information");
+            alertWinner.setContentText("Le joueur " + winner.getName() + " a gagné !");
+            alertWinner.setOnHidden(evt -> Platform.exit());
+            alertWinner.show();
+        }
+    }
+
+    private static void checkAttackWeapon(Player currentPlayer, AnimationTimer animationTimer) {
         Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
         for (int i = 0; i < players.length; i++) {
 
@@ -112,12 +145,13 @@ public final class ArenaController implements Initializable {
 
                 if (r1.intersects(r2.getLayoutBounds())) {
                     player.setLife(player.getLife() - bullet.getDamage());
+                    checkWinner(animationTimer);
                 }
             }
         }
     }
 
-    private static void checkCollisions() {
+    private static void checkCollisions(AnimationTimer animationTimer) {
         Player[] players = Players.getList().toArray(new Player[Players.getList().size()]);
         for (int i = 0; i < players.length; i++) {
             for (int j = i+1; j < players.length; j++) {
@@ -136,6 +170,7 @@ public final class ArenaController implements Initializable {
                 if (r1.intersects(r2.getLayoutBounds())) {
                     p1.handleCollision();
                     p2.handleCollision();
+                    checkWinner(animationTimer);
                 }
             }
         }

@@ -53,7 +53,7 @@
 
     <Button mnemonicParsing="false" text="Ajouter joueur" onAction="#addPlayer" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
     <Button mnemonicParsing="false" text="Jouer"  onAction="#startGame" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-    <Button mnemonicParsing="false" text="Avec collision"  onAction="#withCollision" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Button mnemonicParsing="false" text="Avec collision"  onAction="#handleWithCollision" fx:id="btnWithCollision" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
     <!--<Button mnemonicParsing="false" onAction="#removePlayer" prefWidth="200.0" text="Enlever joueur" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
 
 </GridPane>

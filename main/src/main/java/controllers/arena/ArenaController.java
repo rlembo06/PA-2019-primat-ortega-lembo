@@ -1,5 +1,6 @@
 package controllers.arena;
 
+import controllers.menu.MenuController;
 import entities.gui.GUI;
 import entities.gui.GameBoard;
 import entities.players.Player;
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class ArenaController implements Initializable {
+public final class ArenaController implements Initializable {
 
     private int LIFE_ROW_SIZE = 100;
     private int LIFE_COL_SIZE = 30;
@@ -76,12 +77,12 @@ public class ArenaController implements Initializable {
         }
     }
 
-    public void generateGame(double timeGame) {
+    private void generateGame(double timeGame) {
         Iterator<ShapePlayer> shapes = board.shapePlayerIterator();
         while (shapes.hasNext()) {
             ShapePlayer shape = shapes.next();
             shape.update(timeGame, board);
-            ArenaController.checkCollisions();
+            if(MenuController.isWithCollision()) ArenaController.checkCollisions();
             shape.render(gripGraphicsContext);
             shape.renderWeapon(gripGraphicsContext);
             ArenaController.checkAttackWeapon(shape.getPlayer());

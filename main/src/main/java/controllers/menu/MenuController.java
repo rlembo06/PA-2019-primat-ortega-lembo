@@ -23,10 +23,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuController implements Initializable {
+public final class MenuController implements Initializable {
 
     //private int MIN_PLAYERS = 1;
     private int MAX_PLAYERS = 3;
+    private static boolean withCollision = true;
+
+    @FXML
+    private Button btnWithCollision;
 
     @FXML
     private GridPane playersGridPane;
@@ -146,4 +150,14 @@ public class MenuController implements Initializable {
         }
     }*/
 
+    @FXML
+    public void handleWithCollision() {
+        if(withCollision) btnWithCollision.setText("Sans collision");
+        else btnWithCollision.setText("Avec collision");
+        withCollision = !withCollision;
+    }
+
+    public static boolean isWithCollision() {
+        return withCollision;
+    }
 }

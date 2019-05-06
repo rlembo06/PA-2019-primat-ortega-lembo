@@ -11,6 +11,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
@@ -18,6 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
@@ -41,6 +43,7 @@ public final class ArenaController implements Initializable {
 
     private Random ran = new Random();
     private static AnimationTimer animationTimer = null;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -83,7 +86,7 @@ public final class ArenaController implements Initializable {
         }
     }
 
-    private void generateGame(double timeGame, AnimationTimer animationTimer) {
+    private void generateGame(double timeGame, AnimationTimer animationTimer){
         Iterator<ShapePlayer> shapes = board.shapePlayerIterator();
         while (shapes.hasNext()) {
             ShapePlayer shape = shapes.next();
@@ -96,6 +99,29 @@ public final class ArenaController implements Initializable {
         }
     }
 
+    private void initKeyboardMoves(Scene scene, ShapePlayer shape){
+        Iterator<ShapePlayer> shapes = board.shapePlayerIterator();
+        if(shapes.hasNext()){
+            try {
+                shape.getPlayer().getMovement().keyboardMoveInit(scene,shape.getPlayer());
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
+            try {
+                shape.getPlayer().getMovement().keyboardMove(scene, shape.getPlayer());
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     private void checkWinner(AnimationTimer animationTimer) {
         Alert alertWinner = new Alert(Alert.AlertType.INFORMATION);
         int countLooser = 0;

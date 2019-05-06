@@ -62,13 +62,13 @@ public class ShapePlayer {
                     e.printStackTrace();
                 }
             }
-            /*case "weapons.Shotgun": {
+            case "weapons.Shotgun": {
                 try {
                     renderShotgun(gc);
                 } catch (IllegalAccessException | InvocationTargetException | InstantiationException e) {
                     e.printStackTrace();
                 }
-            }*/
+            }
         }
     }
 
